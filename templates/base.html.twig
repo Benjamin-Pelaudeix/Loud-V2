@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Loud Esport - {% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('assets/css/desktop-min-1281-px.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/desktop-min-320-px-max-480-px.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/mobile-min-320-px-max-480-px.css') }}">
         <script src="https://kit.fontawesome.com/e5e7c64170.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -13,6 +13,7 @@
                 <img src="{{ asset('assets/img/logo/loudblanc.svg') }}" alt="Loud logo">
                 <h1>Loud Esport</h1>
             </div>
+            <i class="fas fa-bars" id="mobile-dropdown-link"></i>
         </header>
         <nav>
             <ul>
@@ -49,12 +50,13 @@
                     <a href="#" class="nav-item">Contact</a>
                 </li>
             </ul>
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link" id="login">
                 <i class="fas fa-lock"></i> Se connecter
             </a>
         </nav>
         {% block body %}{% endblock %}
         <script src="{{ asset('assets/js/nav.js') }}"></script>
+        <script src="{{ asset('assets/js/nav-mobile.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
