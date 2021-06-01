@@ -2,18 +2,61 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        <title>Loud Esport - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/desktop-min-1281-px.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/mobile-min-320-px-max-480-px.css') }}">
+        <script src="https://kit.fontawesome.com/e5e7c64170.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <header>
+            <div id="header-logo">
+                <img src="{{ asset('assets/img/logo/loudblanc.svg') }}" alt="Loud logo">
+                <h1>Loud Esport</h1>
+            </div>
+            <i class="fas fa-bars" id="mobile-dropdown-link"></i>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="nav-item">Accueil</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Histoire</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Actualités</a>
+                </li>
+                <li class="dropdown-link">
+                    <p class="nav-item">Équipes <i class="fas fa-caret-down"></i></p>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a href="#" class="nav-item">Item X</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="nav-item">Item X</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="nav-item">Item X</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="nav-item">Item X</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Web TV</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Contact</a>
+                </li>
+            </ul>
+            <a href="#" class="nav-link" id="login">
+                <i class="fas fa-lock"></i> Se connecter
+            </a>
+        </nav>
         {% block body %}{% endblock %}
+        <script src="{{ asset('assets/js/nav.js') }}"></script>
+        <script src="{{ asset('assets/js/nav-mobile.js') }}"></script>
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

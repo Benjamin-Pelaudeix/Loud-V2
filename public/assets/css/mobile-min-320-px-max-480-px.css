@@ -1,0 +1,58 @@
+@import '_root.css';
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    #header-logo {
+        width: fit-content;
+    }
+
+    #header-logo img {
+        height: 25px;
+        width: auto;
+    }
+
+    #header-logo h1 {
+        font-size: 25px;
+    }
+
+    #mobile-dropdown-link {
+        display: unset;
+    }
+
+    #login {
+        display: none;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        padding: 1em 0;
+        background-color: var(--black-transparent-color);
+    }
+
+    nav ul:not(.dropdown-menu) {
+        flex-direction: column;
+    }
+
+    nav li {
+        text-align: center;
+    }
+
+    nav li:not(.dropdown-item) {
+        margin-right: 0;
+    }
+
+    .dropdown-menu {
+        display: unset;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        line-height: initial;
+        background-color: transparent;
+    }
+
+    .dropdown-item:last-child {
+        padding-bottom: 0;
+    }
+
+}

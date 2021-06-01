@@ -1,0 +1,85 @@
+@import "_root.css";
+
+    header {
+        background-color: var(--main-red-color);
+        padding: .3em 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #header-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+    }
+
+    #header-logo img {
+        height: 35px;
+        width: auto;
+        margin-right: 1em;
+    }
+
+    #header-logo h1 {
+        font-family: var(--header-title-font);
+        font-size: 35px;
+        text-transform: uppercase;
+        color: var(--white-color);
+    }
+
+    #mobile-dropdown-link {
+        font-size: 20px;
+        color: var(--white-color);
+        display: none;
+    }
+
+    nav {
+        background-color: var(--black-color);
+        position: absolute;
+        width: 100%;
+        padding: 0 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav a, nav p {
+        color: var(--white-color);
+        text-decoration: none;
+        font-family: var(--nav-link-font);
+        font-size: 16px;
+    }
+
+    nav ul:not(.dropdown-menu) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav li {
+        padding: .3em .5em;
+    }
+
+    nav li:not(.dropdown-item) {
+        margin-right: 2em;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: var(--black-color);
+        width: fit-content;
+        list-style-type: none;
+        margin-top: .2em;
+        line-height: 1.5em;
+        padding: .3em 1em;
+        text-align: center;
+        transform: translateX(-.7em);
+    }
+
+    .nav-item {
+        color: var(--white-color);
+        text-decoration: none;
+    }
