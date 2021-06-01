@@ -1,0 +1,34 @@
+/**
+    Root stylesheet
+    >> Define style variables
+ */
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Montserrat;
+}
+
+:root {
+    /* colors */
+    --main-red-color: #B0413E;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    /* fonts */
+    --header-title-font: Montserrat-Bold, sans-serif;
+    --nav-link-font: Montserrat, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
