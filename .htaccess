@@ -1,5 +1,5 @@
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^chloe-et-killian.benjaminpelaudeix.fr$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.chloe-et-killian.benjaminpelaudeix.fr$
+RewriteCond %{HTTP_HOST} ^www.test.loudesport.eu.fr$
 RewriteCond %{REQUEST_URI} !public/assets/
 RewriteRule (.*) /public/ [L]
