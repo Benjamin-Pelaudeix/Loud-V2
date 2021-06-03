@@ -23,11 +23,6 @@
         display: none;
     }
 
-    #mobile-dropdown-link {
-        display: unset;
-        color: var(--black-color);
-    }
-
     #login {
         display: none;
     }
@@ -44,7 +39,7 @@
         padding: 0;
     }
 
-    nav ul:not(.dropdown-menu) {
+    nav ul {
         flex-direction: column;
         background-color: var(--black-transparent-color);
     }
@@ -57,21 +52,7 @@
         color: var(--white-color);
     }
 
-    nav li:not(.dropdown-item) {
+    nav li {
         margin-right: 0;
     }
-
-    .dropdown-menu {
-        display: unset;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        line-height: initial;
-        background-color: transparent;
-    }
-
-    .dropdown-item:last-child {
-        padding-bottom: 0;
-    }
-
 }

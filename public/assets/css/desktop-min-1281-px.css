@@ -59,7 +59,7 @@
         color: var(--main-red-color);
     }
 
-    nav ul:not(.dropdown-menu) {
+    nav ul {
         display: flex;
         flex-direction: row;
     }
@@ -69,21 +69,8 @@
         list-style-type: none;
     }
 
-    nav li:not(.dropdown-item) {
+    nav li {
         margin-right: 2em;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        background-color: var(--black-color);
-        width: fit-content;
-        list-style-type: none;
-        margin-top: .2em;
-        line-height: 1.5em;
-        padding: .3em 1em;
-        text-align: center;
-        transform: translateX(-.7em);
     }
 
     .nav-item {
