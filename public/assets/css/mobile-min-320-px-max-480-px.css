@@ -2,6 +2,10 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
 
+    header {
+        padding: 1em 1em;
+    }
+
     #header-logo {
         width: fit-content;
     }
@@ -15,7 +19,7 @@
         font-size: 25px;
     }
 
-    #login {
+    #shop {
         display: none;
     }
 
@@ -28,19 +32,29 @@
         display: none;
     }
 
-    nav {
+    #desktop-nav {
         display: none;
+    }
+
+    #mobile-nav {
         flex-direction: column;
-        padding: 1em 0;
-        background-color: var(--black-transparent-color);
+    }
+
+    nav {
+        padding: 0;
     }
 
     nav ul:not(.dropdown-menu) {
         flex-direction: column;
+        background-color: var(--black-transparent-color);
     }
 
     nav li {
         text-align: center;
+    }
+
+    .nav-item {
+        color: var(--white-color);
     }
 
     nav li:not(.dropdown-item) {

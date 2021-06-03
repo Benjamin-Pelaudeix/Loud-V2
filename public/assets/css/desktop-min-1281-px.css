@@ -1,7 +1,7 @@
 @import "_root.css";
 
     header {
-        padding: 1em 1em;
+        padding: 1em 4em;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -17,7 +17,7 @@
     }
 
     #header-logo img {
-        height: 3.5em;
+        height: 2.5em;
         width: auto;
         margin-right: 1em;
     }
