@@ -10,12 +10,33 @@
     <body>
         <header>
             <div id="header-logo">
-                <img src="{{ asset('assets/img/logo/loudblanc.svg') }}" alt="Loud logo">
-                <h1>Loud Esport</h1>
+                <a href="#" class="nav-item">
+                    <img src="{{ asset('assets/img/logo/loudrouge.svg') }}" alt="Loud logo">
+                </a>
+                <nav id="desktop-nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-item">Histoire</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item">Actualités</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item">Équipes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item">Web TV</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-item">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+            <a href="#" class="nav-item"><i class="fas fa-sign-in-alt"></i> Connexion</a>
             <i class="fas fa-bars" id="mobile-dropdown-link"></i>
         </header>
-        <nav>
+        <nav id="mobile-nav">
             <ul>
                 <li>
                     <a href="#" class="nav-item">Accueil</a>
@@ -55,6 +76,7 @@
             </a>
         </nav>
         {% block body %}{% endblock %}
+        <!-- javascript -->
         <script src="{{ asset('assets/js/nav.js') }}"></script>
         <script src="{{ asset('assets/js/nav-mobile.js') }}"></script>
         {% block javascripts %}{% endblock %}
