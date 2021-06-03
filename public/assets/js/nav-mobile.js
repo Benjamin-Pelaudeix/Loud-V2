@@ -2,7 +2,7 @@
 // dropdown link
 let mobileDropdownLink = document.querySelector('#mobile-dropdown-link')
 // nav menu
-let nav = document.querySelector('nav')
+let nav = document.querySelector('#mobile-nav')
 
 mobileDropdownLink.addEventListener('click', (e) => {
     if (nav.style.display === 'unset') {

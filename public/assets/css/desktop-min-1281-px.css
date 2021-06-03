@@ -1,12 +1,13 @@
 @import "_root.css";
 
     header {
-        background-color: var(--main-red-color);
-        padding: .3em 1em;
+        padding: 1em 1em;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid black;
+        box-shadow: 0 .3em .5em var(--main-red-color);
     }
 
     #header-logo {
@@ -17,7 +18,7 @@
     }
 
     #header-logo img {
-        height: 35px;
+        height: 3.5em;
         width: auto;
         margin-right: 1em;
     }
@@ -35,10 +36,12 @@
         display: none;
     }
 
+    #mobile-nav {
+        display: none;
+    }
+
     nav {
-        background-color: var(--black-color);
-        position: absolute;
-        width: 100%;
+        list-style-type: none;
         padding: 0 1em;
         display: flex;
         flex-direction: row;
@@ -46,11 +49,15 @@
         align-items: center;
     }
 
-    nav a, nav p {
+    header a, nav a, nav p {
         color: var(--white-color);
         text-decoration: none;
         font-family: var(--nav-link-font);
         font-size: 16px;
+    }
+
+    header a:hover {
+        color: var(--main-red-color);
     }
 
     nav ul:not(.dropdown-menu) {
@@ -60,6 +67,7 @@
 
     nav li {
         padding: .3em .5em;
+        list-style-type: none;
     }
 
     nav li:not(.dropdown-item) {
@@ -80,6 +88,6 @@
     }
 
     .nav-item {
-        color: var(--white-color);
+        color: var(--black-color);
         text-decoration: none;
     }
