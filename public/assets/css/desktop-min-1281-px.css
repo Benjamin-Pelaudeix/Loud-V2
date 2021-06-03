@@ -1,13 +1,12 @@
 @import "_root.css";
 
     header {
-        padding: 1em 1em;
+        padding: 1em 4em;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid black;
-        box-shadow: 0 .3em .5em var(--main-red-color);
+        border-bottom: 1px solid var(--main-red-color);
     }
 
     #header-logo {
@@ -18,7 +17,7 @@
     }
 
     #header-logo img {
-        height: 3.5em;
+        height: 2.5em;
         width: auto;
         margin-right: 1em;
     }
@@ -60,7 +59,7 @@
         color: var(--main-red-color);
     }
 
-    nav ul:not(.dropdown-menu) {
+    nav ul {
         display: flex;
         flex-direction: row;
     }
@@ -70,21 +69,8 @@
         list-style-type: none;
     }
 
-    nav li:not(.dropdown-item) {
+    nav li {
         margin-right: 2em;
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        background-color: var(--black-color);
-        width: fit-content;
-        list-style-type: none;
-        margin-top: .2em;
-        line-height: 1.5em;
-        padding: .3em 1em;
-        text-align: center;
-        transform: translateX(-.7em);
     }
 
     .nav-item {

@@ -33,7 +33,7 @@
                     </ul>
                 </nav>
             </div>
-            <a href="#" class="nav-item"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+            <a href="#" target="_blank" rel="noopener" class="nav-item" id="shop"><i class="fas fa-shopping-bag"></i> Boutique</a>
             <i class="fas fa-bars" id="mobile-dropdown-link"></i>
         </header>
         <nav id="mobile-nav">
@@ -49,20 +49,9 @@
                 </li>
                 <li class="dropdown-link">
                     <p class="nav-item">Équipes <i class="fas fa-caret-down"></i></p>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                            <a href="#" class="nav-item">Item X</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="#" class="nav-item">Item X</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="#" class="nav-item">Item X</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a href="#" class="nav-item">Item X</a>
-                        </li>
-                    </ul>
+                </li>
+                <li>
+                    <a href="#" target="_blank" rel="noopener" class="nav-item">Boutique</a>
                 </li>
                 <li>
                     <a href="#" class="nav-item">Web TV</a>
@@ -71,13 +60,9 @@
                     <a href="#" class="nav-item">Contact</a>
                 </li>
             </ul>
-            <a href="#" class="nav-link" id="login">
-                <i class="fas fa-lock"></i> Se connecter
-            </a>
         </nav>
         {% block body %}{% endblock %}
         <!-- javascript -->
-        <script src="{{ asset('assets/js/nav.js') }}"></script>
         <script src="{{ asset('assets/js/nav-mobile.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>

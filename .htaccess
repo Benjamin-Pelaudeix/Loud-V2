@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^test.loudesport.eu$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.test.loudesport.eu$
 RewriteCond %{REQUEST_URI} !public/
-RewriteRule (.*) /public/ [L]
+RewriteRule (.*)$ /public/$1 [L]
