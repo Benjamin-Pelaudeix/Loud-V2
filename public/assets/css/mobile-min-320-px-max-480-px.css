@@ -15,8 +15,13 @@
         font-size: 25px;
     }
 
+    #login {
+        display: none;
+    }
+
     #mobile-dropdown-link {
         display: unset;
+        color: var(--black-color);
     }
 
     #login {
