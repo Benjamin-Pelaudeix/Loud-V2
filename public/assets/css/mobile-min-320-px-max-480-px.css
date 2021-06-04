@@ -41,7 +41,7 @@
 
     nav ul {
         flex-direction: column;
-        background-color: var(--black-transparent-color);
+        background-color: var(--black-color);
     }
 
     nav li {
@@ -54,5 +54,11 @@
 
     nav li {
         margin-right: 0;
+    }
+
+    #mobile-dropdown-link {
+        display: unset;
+        color: var(--main-red-color);
+        font-size: 20px;
     }
 }

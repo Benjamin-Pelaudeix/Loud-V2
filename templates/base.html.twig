@@ -33,7 +33,6 @@
                     </ul>
                 </nav>
             </div>
-            <a href="#" target="_blank" rel="noopener" class="nav-item" id="shop"><i class="fas fa-shopping-bag"></i> Boutique</a>
             <i class="fas fa-bars" id="mobile-dropdown-link"></i>
         </header>
         <nav id="mobile-nav">
@@ -62,8 +61,15 @@
             </ul>
         </nav>
         {% block body %}{% endblock %}
+        <footer>
+            <div id="footer-logo">
+                <h1>Looud</h1>
+                <p>Tous droits réservés - <span id="current-year"></span> - <a href="#">CGU</a> - <a href="#">Mentions légales</a></p>
+            </div>
+        </footer>
         <!-- javascript -->
         <script src="{{ asset('assets/js/nav-mobile.js') }}"></script>
+        <script src="{{ asset('assets/js/footer.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

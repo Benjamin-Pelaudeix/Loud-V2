@@ -14,7 +14,13 @@
 }
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Montserrat-Semi-Bold;
+    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Stretch;
+    src: url("../fonts/stretch.otf") format("opentype");
 }
 
 :root {
@@ -26,6 +32,8 @@
     /* fonts */
     --header-title-font: Montserrat-Bold, sans-serif;
     --nav-link-font: Montserrat, sans-serif;
+    --footer-title-font: Stretch, sans-serif;
+    --footer-text-font: Montserrat, sans-serif;
 }
 
 * {

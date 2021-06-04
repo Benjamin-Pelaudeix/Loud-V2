@@ -1,5 +1,5 @@
 @import "_root.css";
-
+/* header + nav*/
     header {
         padding: 1em 4em;
         display: flex;
@@ -75,5 +75,27 @@
 
     .nav-item {
         color: var(--black-color);
+        text-decoration: none;
+    }
+
+/* footer */
+    footer {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 1em 2em;
+    }
+
+    #footer-logo h1 {
+        font-family: var(--footer-title-font);
+        text-transform: uppercase;
+    }
+
+    #footer-logo p {
+        font-family: var(--footer-text-font);
+        font-size: 12px;
+    }
+
+    #footer-logo a {
+        color: var(--white-color);
         text-decoration: none;
     }
