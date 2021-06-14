@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre histoire{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div id="history">
+            <h1>Histooire du club</h1>
+            <div id="history-text">
+                <p>Loud est une association loi 1901 qui a pour mission de <span>promouvoir l'esport</span> et d'<span>accompagner les joueurs amateurs</span> sur les circuits compétitifs. Le club a été fondé le <span>26 juin 2018</span> par Nooper et Yato, deux passionnés de jeux vidéo et de sport électronique. Au fil des années, l'association a su accueillir et structurer plus d'une <span>centaine de membres</span>, français comme internationaux sur diverses scènes importantes comme <span>FIFA</span>, <span>Hearthstone</span> ou encore <span>Trackmania</span>. Aujourd'hui, le club est présent sur <span>six scènes</span> et compte plus d'une <span>cinquantaine de membres</span>. Outre sa mission d'accompagnement, l'association intervient aussi dans la création d'<span>évènements</span>. Ces évènements sont organisés de <span>A à Z</span> par des membres du club qui assurent sa <span>création</span>, son bon <span>déroulement</span> ainsi que la <span>gestion après-évènement</span>.</p>
+                <a href="#" class="link-button">
+                    Découvrez nos évènements <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+        <div id="staff">
+            <h1>Nootre équipe dirigeante</h1>
+            <h2>Bureau restreint</h2>
+            <div class="members">
+                <div class="member">
+                    <div class="member-photo">
+                        <img src="{{ asset('assets/img/background/wave.jpg') }}" alt="Photo Nooper">
+                    </div>
+                    <div class="member-infos">
+                        <div class="member-info-names">
+                            <h1 class="member-name">Pseudo</h1>
+                            <h2 class="member-full-name">Prénom Nom - Rôle</h2>
+                        </div>
+                        <hr>
+                        <div class="member-socials">
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Pôle communication</h2>
+            <h2>Pôle graphisme</h2>
+            <h2>Pôle évènementiel</h2>
+        </div>
+        </div>
+    </div>
+{% endblock %}
