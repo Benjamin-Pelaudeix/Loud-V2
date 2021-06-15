@@ -215,6 +215,18 @@ margin: 1.5em 0;
     padding: 1em 1em;
 }
 
+.member-info-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member-info-flex img {
+    height: 35px;
+    width: auto;
+}
+
 .member-socials {
     display: flex;
     flex-direction: row;

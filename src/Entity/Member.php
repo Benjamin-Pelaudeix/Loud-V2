@@ -69,6 +69,12 @@ class Member
      */
     private $discord;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Nationality::class)
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $nationality;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -190,6 +196,18 @@ class Member
     public function setDiscord(?string $discord): self
     {
         $this->discord = $discord;
+
+        return $this;
+    }
+
+    public function getNationality(): ?Nationality
+    {
+        return $this->nationality;
+    }
+
+    public function setNationality(?Nationality $nationality): self
+    {
+        $this->nationality = $nationality;
 
         return $this;
     }

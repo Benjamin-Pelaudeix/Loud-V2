@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Member;
+use App\Entity\Nationality;
 use App\Entity\Role;
 use App\Entity\Section;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -33,6 +34,7 @@ class AdminDashboardController extends AbstractDashboardController
         yield MenuItem::section('Administration');
         yield MenuItem::linkToCrud('Sections', 'fas fa-users', Section::class);
         yield MenuItem::linkToCrud('Rôles', 'fas fa-crown', Role::class);
+        yield MenuItem::linkToCrud('Nationalités', 'fas fa-globe', Nationality::class);
         yield MenuItem::linkToCrud('Membres', 'fas fa-user', Member::class);
     }
 }

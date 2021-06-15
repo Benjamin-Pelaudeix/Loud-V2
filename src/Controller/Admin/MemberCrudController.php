@@ -32,6 +32,8 @@ class MemberCrudController extends AbstractCrudController
             TextField::new('gamename', 'Pseudo'),
             TextField::new('firstname', 'Prénom'),
             TextField::new('lastname', 'Nom'),
+            AssociationField::new('nationality', 'Nationalité')
+                ->setRequired(true),
             AssociationField::new('section', 'Section')
                 ->setRequired(true),
             AssociationField::new('role', 'Rôle')
