@@ -61,4 +61,29 @@
         color: var(--main-red-color);
         font-size: 20px;
     }
+
+    body .container {
+        padding: 2em 2em;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .container h2 {
+        font-size: 16px;
+    }
+
+    .container p {
+        font-size: 12px;
+    }
+
+    .members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-full-name {
+        font-size: 8px;
+    }
 }

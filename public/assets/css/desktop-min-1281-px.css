@@ -7,7 +7,6 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--main-red-color);
-    z-index: 2;
 }
 
 #header-logo {
@@ -84,7 +83,6 @@ footer {
     background-color: var(--black-color);
     color: var(--white-color);
     padding: 1em 2em;
-    z-index: 2;
 }
 
 #footer-logo h1 {
@@ -125,16 +123,6 @@ footer {
 
 body .container {
     padding: 3em 10em;
-    z-index: 3;
-}
-
-#body-background {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.4;
 }
 
 /* links */
@@ -255,7 +243,7 @@ margin: 1.5em 0;
 
 .member-full-name {
     color: var(--white-color);
-    font-size: 15px;
+    font-size: 12px;
     text-align: right;
 }
 
