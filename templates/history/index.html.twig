@@ -22,7 +22,7 @@
                     <div class="member">
                         <div class="member-photo">
                             {% if member.photo %}
-                                <img src="/uploads/{{ member.photo }}" alt="Photo {{ member.gamename }}">
+                                <img src="/uploads/member-photo/{{ member.photo }}" alt="Photo {{ member.gamename }}">
                             {% else %}
                                 <img src="{{ asset('assets/img/logo/loudrouge.svg') }}" alt="Logo Loud">
                             {% endif %}
