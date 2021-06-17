@@ -6,30 +6,32 @@
     <div class="container">
         <h1>Noos actualités</h1>
         {% for category in categories | slice(0,4) | sort((a,b) => a.name > b.name) %}
-            <h2>{{ category.name }}</h2>
-            <div class="news-flex">
-                {% for new in category.news | slice(0,4) %}
-                <div class="news">
-                    <div class="news-photo">
-                        <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
-                    </div>
-                    <div class="news-infos">
-                        <h2>{{ new.title }}</h2>
-                        <p>Par {{ new.author.login }}, le {{ new.createdAt | date('j/m/Y') }} à {{ new.createdAt | date('H:m') }}</p>
-                        <div class="badges">
-                            {% for category in new.category %}
-                                <p class="badge">
-                                    {{ category.name }}
-                                </p>
-                            {% endfor %}
+            {% if category.news | length > 0 %}
+                <h2>{{ category.name }}</h2>
+                <div class="news-flex">
+                    {% for new in category.news | slice(0,4) %}
+                    <div class="news">
+                        <div class="news-photo">
+                            <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
+                        </div>
+                        <div class="news-infos">
+                            <h2>{{ new.title }}</h2>
+                            <p>Par {{ new.author.login }}, le {{ new.createdAt | date('j/m/Y') }} à {{ new.createdAt | date('H:m') }}</p>
+                            <div class="badges">
+                                {% for category in new.category %}
+                                    <p class="badge">
+                                        {{ category.name }}
+                                    </p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="news-buttons">
+                            <a href="{{ path('news_detail', { slug: new.slug }) }}" class="link-button">Lire</a>
                         </div>
                     </div>
-                    <div class="news-buttons">
-                        <a href="{{ path('news_detail', { slug: new.slug }) }}" class="link-button">Lire</a>
-                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}

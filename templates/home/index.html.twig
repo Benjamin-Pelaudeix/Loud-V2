@@ -1,8 +1,56 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    Accueil
-{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
+    {% if bigNews %}
+    <div id="big-news">
+        <div id="big-news-infos">
+            <h1>Deernière minute</h1>
+            <div id="big-news-infos-flex">
+                <h2>{{ bigNews.0.title }}</h2>
+                <a href="{{ path('news_detail', { slug: bigNews.0.slug }) }}">Lire <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="container">
+        <h1>Deernières actualités</h1>
+        <div class="news" id="last-news">
+            <div class="news-photo">
+                <img src="/uploads/article-photo/{{ lastNews.photo }}" alt="{{ lastNews.title }} photo">
+            </div>
+            <div class="news-infos">
+                <div>
+                    <h1>{{ lastNews.title }}</h1>
+                    <div class="badges">
+                        {% for category in lastNews.category %}
+                            <p class="badge">{{ category.name }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <a href="{{ path('news_detail', { slug: lastNews.slug }) }}" class="link-button">Lire <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+        <div class="news-flex" id="three-last">
+            {% for news in threeLast %}
+                <div class="news">
+                    <div class="news-photo">
+                        <img src="/uploads/article-photo/{{ news.photo }}" alt="{{ news.title }} photo">
+                    </div>
+                    <div class="news-infos">
+                        <div>
+                            <h1>{{ news.title }}</h1>
+                            <div class="badges">
+                                {% for category in news.category %}
+                                    <p class="badge">{{ category.name }}</p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <a href="{{ path('news_detail', { slug: news.slug }) }}" class="link-button">Lire <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

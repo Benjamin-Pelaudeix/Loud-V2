@@ -175,6 +175,56 @@ form button {
     margin-top: 1em;
 }
 
+/* home */
+#big-news {
+    width: 100%;
+    height: 5em;
+    background-color: var(--black-color);
+    padding: .3em 2em;
+}
+
+#big-news h1 {
+    font-family: var(--body-header-font);
+    color: var(--main-red-color);
+    text-transform: uppercase;
+}
+
+#big-news h2, #big-news a {
+    font-family: var(--body-subtitle-font);
+    color: white;
+}
+
+#big-news a {
+    text-decoration: none;
+}
+
+#big-news a:hover {
+    color: var(--main-red-color);
+}
+
+#big-news-infos-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#last-news {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#last-news .news-photo {
+    height: 20em;
+}
+
+#last-news .news-infos, #three-last .news-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* history */
 #history {
 margin-bottom: 2em;

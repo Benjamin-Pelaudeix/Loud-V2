@@ -38,8 +38,7 @@ class NewsCrudController extends AbstractCrudController
                 ->setRequired(true),
             AssociationField::new('author', 'Auteur')
                 ->setRequired(true),
-            BooleanField::new('isImportant', 'Afficher sur l\'accueil')
-                ->setRequired(true),
+            BooleanField::new('isImportant', 'Afficher sur l\'accueil'),
             DateTimeField::new('createdAt', 'Créé le')
                 ->setRequired(true)
                 ->setTimezone('Europe/Paris')
