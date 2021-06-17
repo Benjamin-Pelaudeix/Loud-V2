@@ -35,6 +35,11 @@ class Administrator implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $createdAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -116,10 +121,15 @@ class Administrator implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function __toString()
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->login;
+        return $this->createdAt ?? new \DateTime('now');
     }
 
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
+        return $this;
+    }
 }
