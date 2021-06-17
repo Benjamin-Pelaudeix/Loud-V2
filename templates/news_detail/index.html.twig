@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="news-content">
+            <h1>{{ news.title }}</h1>
+            <p>Écrit par {{ news.author.login }}, le {{ news.createdAt | date('d/m/Y') }} à {{ news.createdAt | date('H:m') }}</p>
+            <div class="news-photo news-content-photo">
+                <img src="/uploads/article-photo/{{ news.photo }}" alt="{{ news.title }} photo">
+            </div>
+            {{ news.body | raw }}
+        </div>
+        <hr>
+        <a href="{{ path('news_index') }}" class="link-button"><i class="fas fa-chevron-left"></i> Retour</a>
+    </div>
+{% endblock %}

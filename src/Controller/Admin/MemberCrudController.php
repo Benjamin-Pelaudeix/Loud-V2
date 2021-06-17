@@ -39,8 +39,8 @@ class MemberCrudController extends AbstractCrudController
             AssociationField::new('role', 'Rôle')
                 ->setRequired(true),
             ImageField::new('photo', 'Photo')
-                ->setBasePath('uploads/')
-                ->setUploadDir('public/uploads/')
+                ->setBasePath('uploads/member-photo')
+                ->setUploadDir('public/uploads/member-photo')
                 ->setUploadedFileNamePattern('[randomhash].[extension]')
                 ->setRequired(false),
             TextField::new('twitter', 'Lien vers Twitter'),
