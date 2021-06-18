@@ -83,6 +83,10 @@ footer {
     background-color: var(--black-color);
     color: var(--white-color);
     padding: 1em 2em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 #footer-logo h1 {
@@ -122,6 +126,7 @@ footer {
 
 body .container {
     padding: 3em 10em;
+    margin-bottom: 3em;
 }
 
 .container hr {
@@ -325,6 +330,7 @@ margin: 1.5em 0;
     max-width: 40%;
     padding-bottom: 1em;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .news-infos {
@@ -370,4 +376,40 @@ margin: 1.5em 0;
     margin-top: 1em;
     margin-bottom: 1em;
     height: 30em;
+}
+
+/* contact */
+#social-flex {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.social {
+    min-width: 30%;
+    max-width: 30%;
+    border: 1px solid var(--main-red-color);
+    padding: .5em 1em;
+    margin-bottom: 1.5em;
+}
+.social-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-infos h2 {
+    color: var(--main-red-color);
+}
+#email {
+    min-width: 100%;
+    max-width: 100%;
+}
+#email .social-infos {
+    margin: .3em 0;
+}
+.social-span {
+    text-transform: uppercase;
 }

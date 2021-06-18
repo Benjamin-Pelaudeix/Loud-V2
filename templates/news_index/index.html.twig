@@ -7,7 +7,7 @@
         <h1>Noos actualités</h1>
         {% for category in categories | slice(0,4) | sort((a,b) => a.name > b.name) %}
             {% if category.news | length > 0 %}
-                <h2>{{ category.name }}</h2>
+                <h2 class="category-name">{{ category.name }}</h2>
                 <div class="news-flex">
                     {% for new in category.news | slice(0,4) %}
                     <div class="news">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="news-buttons">
-                            <a href="{{ path('news_detail', { slug: new.slug }) }}" class="link-button">Lire</a>
+                            <a href="{{ path('news_detail', { slug: new.slug }) }}" class="link-button">Lire <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                     {% endfor %}
