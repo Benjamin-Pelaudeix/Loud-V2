@@ -16,6 +16,7 @@
         <div id="staff">
             <h1>Nootre équipe dirigeante</h1>
             {% for section in sections %}
+                {% if section.members | length > 0 %}
                 <h2>{{ section.name }}</h2>
                 <div class="members">
                     {% for member in section.members %}
@@ -59,6 +60,7 @@
                     </div>
                     {% endfor %}
                 </div>
+                {% endif %}
             {% endfor %}
         </div>
         </div>
