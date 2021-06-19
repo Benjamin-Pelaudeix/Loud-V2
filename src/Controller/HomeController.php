@@ -27,7 +27,7 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
-        $bigNews = $this->entityManager->getRepository(News::class)->findBy(array('isImportant' => '= true'), array(), 1);
+        $bigNews = $this->entityManager->getRepository(News::class)->findBy(array('isImportant' => '= true'), array('createdAt' => 'DESC'), 1);
         $lastNews = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 1);
         $threeLast = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 2, 1);
         return $this->render('home/index.html.twig', [
