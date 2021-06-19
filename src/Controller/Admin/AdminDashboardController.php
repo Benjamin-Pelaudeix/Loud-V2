@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Administrator;
 use App\Entity\AdministratorRole;
 use App\Entity\Category;
+use App\Entity\Event;
 use App\Entity\Member;
 use App\Entity\Nationality;
 use App\Entity\News;
@@ -44,7 +45,7 @@ class AdminDashboardController extends AbstractDashboardController
         }
 
         if ($role == 'ROLE_EVENEMENTIEL') {
-            // return $this->redirect($routeBuilder->setController(AdministratorCrudController::class)->generateUrl());
+            return $this->redirect($routeBuilder->setController(EventCrudController::class)->generateUrl());
         }
     }
 
@@ -79,6 +80,7 @@ class AdminDashboardController extends AbstractDashboardController
         }
         if ($role == 'ROLE_EVENEMENTIEL' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Évènementiel');
+            yield MenuItem::linkToCrud('Évènements', 'fas fa-trophy', Event::class);
         }
     }
 }
