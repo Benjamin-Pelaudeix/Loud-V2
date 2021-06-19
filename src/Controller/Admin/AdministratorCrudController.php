@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Administrator;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -23,7 +24,15 @@ class AdministratorCrudController extends AbstractCrudController
                 ->setRequired(true),
             TextField::new('password', 'Mot de passe')
                 ->setRequired(true)
-                ->setFormType(PasswordType::class)
+                ->setFormType(PasswordType::class),
+            ChoiceField::new('roles', 'Rôles')
+                ->setChoices([
+                    'Global' => 'ROLE_GLOBAL',
+                    'Esport' => 'ROLE_ESPORT',
+                    'Communication' => 'ROLE_COMMUNICATION',
+                    'Évènementiel' => 'ROLE_EVENEMENTIEL',
+                ])
+                ->allowMultipleChoices(true)
         ];
     }
 }

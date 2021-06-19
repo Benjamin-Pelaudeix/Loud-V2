@@ -180,6 +180,25 @@ form button {
     margin-top: 1em;
 }
 
+form button:focus {
+    background-color: var(--main-red-color);
+    color: var(--white-color);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    font-family: var(--body-text-font);
+}
+
+#notice {
+    font-style: italic;
+    margin-top: 1em;
+}
+
 /* home */
 #big-news {
     width: 100%;
