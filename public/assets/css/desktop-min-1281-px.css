@@ -217,6 +217,16 @@ form button:focus {
     margin-top: 1em;
 }
 
+.alert {
+    border: 1px solid var(--main-red-color);
+    background-color: var(--main-red-color);
+    font-family: var(--body-text-font);
+    color: var(--white-color);
+    width: fit-content;
+    padding: .5em 1em;
+    margin-top: 1em;
+}
+
 /* home */
 #big-news {
     width: 100%;

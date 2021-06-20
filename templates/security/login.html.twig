@@ -5,10 +5,6 @@
 {% block body %}
     <div class="container">
         <form method="post" id="login-form">
-            {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
-
             <h1>Acccès administrateur</h1>
             <label for="inputLogin">Login</label>
             <input type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" autocomplete="username" required autofocus>
@@ -23,6 +19,13 @@
                 Connexion
             </button>
         </form>
+
+        {% if error %}
+            <div class="alert">
+                <b>Erreur :</b> {{ error.messageKey|trans(error.messageData, 'security') }}
+            </div>
+        {% endif %}
+
         <p id="notice">En cas d'oubli du mot de passe, merci de contacter <span>Ben</span>.</p>
     </div>
 {% endblock %}
