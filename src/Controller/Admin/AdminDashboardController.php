@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Administrator;
 use App\Entity\AdministratorRole;
 use App\Entity\Category;
+use App\Entity\Content;
 use App\Entity\Event;
 use App\Entity\EventGame;
 use App\Entity\Member;
@@ -12,6 +13,7 @@ use App\Entity\Nationality;
 use App\Entity\News;
 use App\Entity\Role;
 use App\Entity\Section;
+use App\Entity\Social;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -66,6 +68,8 @@ class AdminDashboardController extends AbstractDashboardController
         if ($role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Administration');
             yield MenuItem::linkToCrud('Administrateurs', 'fas fa-user', Administrator::class);
+            yield MenuItem::linkToCrud('Réseaux', 'fas fa-globe', Social::class);
+            yield MenuItem::linkToCrud('Contenu', 'fas fa-align-left', Content::class);
         }
         if ($role == 'ROLE_ESPORT' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Esport');

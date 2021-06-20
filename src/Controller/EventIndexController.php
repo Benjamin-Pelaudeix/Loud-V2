@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Content;
 use App\Entity\Event;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,8 +30,10 @@ class EventIndexController extends AbstractController
     public function index(): Response
     {
         $events = $this->entityManager->getRepository(Event::class)->findAll();
+        $eventsContent = $this->entityManager->getRepository(Content::class)->findOneByName('tournament-presentation');
         return $this->render('event_index/index.html.twig', [
-            'events' => $events
+            'events' => $events,
+            'tournamentPresentation' => $eventsContent
         ]);
     }
 }

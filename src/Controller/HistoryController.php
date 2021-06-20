@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Content;
 use App\Entity\Section;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,8 +29,10 @@ class HistoryController extends AbstractController
     public function index(): Response
     {
         $sections = $this->entityManager->getRepository(Section::class)->findBy(array(), array(), 4);
+        $historyContent = $this->entityManager->getRepository(Content::class)->findOneByName('history');
         return $this->render('history/index.html.twig', [
-            'sections' => $sections
+            'sections' => $sections,
+            'history' => $historyContent
         ]);
     }
 }

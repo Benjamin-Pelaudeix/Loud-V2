@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container">
         <h1>Noos tournois</h1>
-        <p>Engagé pour les joueurs mais aussi pour la compétition, Loud organise des tournois sur diverses scènes comme <span>Trackmania</span>.</p>
+        {{ tournamentPresentation.content | raw }}
         <div class="events-flex">
             {% for event in events %}
                 <div class="event">

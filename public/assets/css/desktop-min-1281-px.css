@@ -137,7 +137,7 @@ footer {
     font-family: var(--body-text-font);
 }
 
-.container p span {
+.container p span, .container strong {
     font-family: var(--body-subtitle-font);
     color: var(--main-red-color);
 }
@@ -145,6 +145,10 @@ footer {
 body .container {
     padding: 3em 10em;
     margin-bottom: 3em;
+}
+
+body div {
+    font-family: var(--body-text-font);
 }
 
 .container hr {
