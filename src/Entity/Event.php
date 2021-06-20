@@ -30,17 +30,28 @@ class Event
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $banner;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $twitterLink;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $tournamentLink;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=EventGame::class, inversedBy="events")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $game;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
 
     public function getId(): ?int
     {
@@ -71,18 +82,6 @@ class Event
         return $this;
     }
 
-    public function getBanner(): ?string
-    {
-        return $this->banner;
-    }
-
-    public function setBanner(?string $banner): self
-    {
-        $this->banner = $banner;
-
-        return $this;
-    }
-
     public function getTwitterLink(): ?string
     {
         return $this->twitterLink ?? "https://twitter.com/EsportLoud";
@@ -103,6 +102,42 @@ class Event
     public function setTournamentLink(string $tournamentLink): self
     {
         $this->tournamentLink = $tournamentLink;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getGame(): ?EventGame
+    {
+        return $this->game;
+    }
+
+    public function setGame(?EventGame $game): self
+    {
+        $this->game = $game;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

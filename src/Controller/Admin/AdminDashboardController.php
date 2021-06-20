@@ -6,6 +6,7 @@ use App\Entity\Administrator;
 use App\Entity\AdministratorRole;
 use App\Entity\Category;
 use App\Entity\Event;
+use App\Entity\EventGame;
 use App\Entity\Member;
 use App\Entity\Nationality;
 use App\Entity\News;
@@ -80,6 +81,7 @@ class AdminDashboardController extends AbstractDashboardController
         }
         if ($role == 'ROLE_EVENEMENTIEL' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Évènementiel');
+            yield MenuItem::linkToCrud('Jeux', 'fas fa-gamepad', EventGame::class);
             yield MenuItem::linkToCrud('Évènements', 'fas fa-trophy', Event::class);
         }
     }
