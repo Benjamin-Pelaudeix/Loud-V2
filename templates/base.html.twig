@@ -3,15 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Loud Esport - {% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('assets/css/desktop-min-1281-px.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/mobile-min-320-px-max-480-px.css') }}">
+        <link rel="stylesheet" href="/assets/css/desktop-min-1281-px.css">
+        <link rel="stylesheet" href="/assets/css/mobile-min-320-px-max-480-px.css">
         <script src="https://kit.fontawesome.com/e5e7c64170.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <div id="header-logo">
                 <a href="{{ path('home') }}" class="nav-item">
-                    <img src="{{ asset('assets/img/logo/loudrouge.svg') }}" alt="Loud logo">
+                    <img src="/assets/img/logo/loudrouge.svg" alt="Loud logo">
                 </a>
                 <nav id="desktop-nav">
                     <ul>
@@ -71,8 +71,8 @@
             </div>
         </footer>
         <!-- javascript -->
-        <script src="{{ asset('assets/js/nav-mobile.js') }}"></script>
-        <script src="{{ asset('assets/js/footer.js') }}"></script>
+        <script src="/assets/js/nav-mobile.js"></script>
+        <script src="/assets/js/footer.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
