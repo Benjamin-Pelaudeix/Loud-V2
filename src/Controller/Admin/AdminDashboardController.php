@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Ad;
 use App\Entity\Administrator;
 use App\Entity\AdministratorRole;
 use App\Entity\Category;
@@ -70,6 +71,7 @@ class AdminDashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('Administrateurs', 'fas fa-user', Administrator::class);
             yield MenuItem::linkToCrud('Réseaux', 'fas fa-globe', Social::class);
             yield MenuItem::linkToCrud('Contenu', 'fas fa-align-left', Content::class);
+            yield MenuItem::linkToCrud('Publicités', 'fas fa-ad', Ad::class);
         }
         if ($role == 'ROLE_ESPORT' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Esport');

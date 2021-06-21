@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Ad;
 use App\Entity\News;
+use App\Entity\Social;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,13 +29,15 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
-        $bigNews = $this->entityManager->getRepository(News::class)->findBy(array('isImportant' => '= true'), array('createdAt' => 'DESC'), 1);
+        $bigNews = $this->entityManager->getRepository(Ad::class)->findBy(array('isFirstPage' => '= 1'), null, 1);
         $lastNews = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 1);
-        $threeLast = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 2, 1);
+        $threeLast = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 3, 1);
+        $socials = $this->entityManager->getRepository(Social::class)->findAll();
         return $this->render('home/index.html.twig', [
             'bigNews' => $bigNews,
             'lastNews' => $lastNews[0],
-            'threeLast' => $threeLast
+            'lastThree' => $threeLast,
+            'socials' => $socials
         ]);
     }
 }
