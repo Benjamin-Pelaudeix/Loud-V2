@@ -503,6 +503,7 @@ margin: 1.5em 0;
     border: 1px solid var(--main-red-color);
     padding: .5em 1em;
     margin-bottom: 1.5em;
+    background-color: var(--white-color);
 }
 .social-infos {
     display: flex;
@@ -539,6 +540,7 @@ margin: 1.5em 0;
     min-width: 25em;
     max-width: 25em;
     max-height: 20em;
+    background-color: var(--white-color);
 }
 
 .event-infos {
