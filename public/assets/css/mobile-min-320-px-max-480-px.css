@@ -33,6 +33,7 @@
 
     #mobile-nav {
         flex-direction: column;
+        padding: 1em 0;
     }
 
     nav {
@@ -85,5 +86,21 @@
 
     .member-full-name {
         font-size: 8px;
+    }
+
+    .last-news {
+        width: 100%;
+    }
+
+    .last-news img {
+        display: none;
+    }
+
+    .last-news .news-infos {
+        position: relative;
+    }
+
+    #last-news-flex {
+        flex-direction: column;
     }
 }

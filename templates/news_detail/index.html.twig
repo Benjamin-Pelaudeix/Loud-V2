@@ -4,7 +4,8 @@
 
 {% block body %}
     <div class="container">
-        <div class="news-content">
+        <a href="{{ path('news_index') }}" class="link-button return"><i class="fas fa-chevron-left"></i> Retour</a>
+        <div class="news-content margin-return">
             <h1>{{ news.title }}</h1>
             <p>Écrit par {{ news.author.login }}, le {{ news.createdAt | date('d/m/Y') }} à {{ news.createdAt | date('H:m') }}</p>
             <div class="news-photo news-content-photo">
@@ -12,7 +13,5 @@
             </div>
             {{ news.body | raw }}
         </div>
-        <hr>
-        <a href="{{ path('news_index') }}" class="link-button"><i class="fas fa-chevron-left"></i> Retour</a>
     </div>
 {% endblock %}

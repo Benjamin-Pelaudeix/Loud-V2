@@ -10,25 +10,19 @@
                 <h2 class="category-name">{{ category.name }}</h2>
                 <div class="news-flex">
                     {% for new in category.news | slice(0,4) %}
-                    <div class="news">
-                        <div class="news-photo">
-                            <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
-                        </div>
-                        <div class="news-infos">
-                            <h2>{{ new.title }}</h2>
-                            <p>Par {{ new.author.login }}, le {{ new.createdAt | date('j/m/Y') }} à {{ new.createdAt | date('H:m') }}</p>
-                            <div class="badges">
-                                {% for category in new.category %}
-                                    <p class="badge">
-                                        {{ category.name }}
-                                    </p>
-                                {% endfor %}
+                        <a href="{{ path('news_detail', { slug: new.slug }) }}">
+                            <div class="news">
+                                <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
+                                <div class="news-infos">
+                                    <h2>{{ new.title }}</h2>
+                                    <div class="badges">
+                                        {% for category in new.category %}
+                                            <p class="badge">{{ category.name }}</p>
+                                        {% endfor %}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="news-buttons">
-                            <a href="{{ path('news_detail', { slug: new.slug }) }}" class="link-button">Lire <i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
+                        </a>
                     {% endfor %}
                 </div>
             {% endif %}

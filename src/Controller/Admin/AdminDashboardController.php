@@ -72,12 +72,12 @@ class AdminDashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('Réseaux', 'fas fa-globe', Social::class);
             yield MenuItem::linkToCrud('Contenu', 'fas fa-align-left', Content::class);
             yield MenuItem::linkToCrud('Publicités', 'fas fa-ad', Ad::class);
-        }
-        if ($role == 'ROLE_ESPORT' || $role == 'ROLE_GLOBAL') {
-            yield MenuItem::section('Esport');
             yield MenuItem::linkToCrud('Sections', 'fas fa-users', Section::class);
             yield MenuItem::linkToCrud('Rôles', 'fas fa-crown', Role::class);
             yield MenuItem::linkToCrud('Nationalités', 'fas fa-globe', Nationality::class);
+        }
+        if ($role == 'ROLE_ESPORT' || $role == 'ROLE_GLOBAL') {
+            yield MenuItem::section('Esport');
             yield MenuItem::linkToCrud('Membres', 'fas fa-user', Member::class);
         }
         if ($role == 'ROLE_COMMUNICATION' || $role == 'ROLE_GLOBAL') {
