@@ -88,7 +88,7 @@ class AdminDashboardController extends AbstractDashboardController
         if ($role == 'ROLE_EVENEMENTIEL' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Évènementiel');
             yield MenuItem::linkToCrud('Jeux', 'fas fa-gamepad', EventGame::class);
-            yield MenuItem::linkToCrud('Évènements', 'fas fa-trophy', Event::class);
+            yield MenuItem::linkToCrud('Tournois', 'fas fa-trophy', Event::class);
         }
     }
 }
