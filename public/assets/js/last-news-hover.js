@@ -2,10 +2,12 @@
 let lastNews = document.querySelector('.last-news')
 let lastNewsPreview = document.querySelector('.last-news-preview')
 
-lastNews.addEventListener('mouseover', () => {
-    lastNewsPreview.style.display = 'unset'
-})
+if (window.innerWidth > 600) {
+    lastNews.addEventListener('mouseover', () => {
+        lastNewsPreview.style.display = 'unset'
+    })
 
-lastNews.addEventListener('mouseleave', () => {
-    lastNewsPreview.style.display = 'none'
-})
+    lastNews.addEventListener('mouseleave', () => {
+        lastNewsPreview.style.display = 'none'
+    })
+}

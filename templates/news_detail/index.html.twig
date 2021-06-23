@@ -11,7 +11,9 @@
             <div class="news-photo news-content-photo">
                 <img src="/uploads/article-photo/{{ news.photo }}" alt="{{ news.title }} photo">
             </div>
-            {{ news.body | raw }}
+            <article>
+                {{ news.body | raw }}
+            </article>
         </div>
     </div>
 {% endblock %}

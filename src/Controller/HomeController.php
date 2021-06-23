@@ -29,12 +29,12 @@ class HomeController extends AbstractController
      */
     public function index(): Response
     {
-        $bigNews = $this->entityManager->getRepository(Ad::class)->findBy(array('isFirstPage' => '= 1'), null, 1);
+        $ad = $this->entityManager->getRepository(Ad::class)->findBy(array('isFirstPage' => '= 1'), null, 1);
         $lastNews = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 1);
         $threeLast = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 3, 1);
         $socials = $this->entityManager->getRepository(Social::class)->findAll();
         return $this->render('home/index.html.twig', [
-            'bigNews' => $bigNews,
+            'ad' => $ad,
             'lastNews' => $lastNews[0],
             'lastThree' => $threeLast,
             'socials' => $socials

@@ -4,10 +4,10 @@
 
 {% block body %}
     <div class="container">
-        {% if bigNews %}
-            <a href="{{ bigNews.0.link }}">
+        {% if ad %}
+            <a href="{{ ad.0.link }}">
                 <div class="big-news">
-                        <img src="/uploads/ads-banner/{{ bigNews.0.banner }}" alt="Bannière publicitaire">
+                        <img src="/uploads/ads-banner/{{ ad.0.banner }}" alt="Bannière publicitaire">
                 </div>
             </a>
         {% endif %}
@@ -31,20 +31,19 @@
                         </div>
                     </div>
                 </a>
-                </div>
                 <div class="column">
                     {% if lastThree %}
                         <div class="last-three">
                             <h2>Autres actualités</h2>
                             {% for news in lastThree %}
-                                <div class="last-three-news">
-                                    <div class="news-infos">
-                                        <h2>{{ news.title | striptags | slice(0,50) }}</h2>
-                                    </div>
-                                    <a href="{{ path('news_detail', { slug: news.slug }) }}">
+                                <a href="{{ path('news_detail', { slug: news.slug }) }}">
+                                    <div class="last-three-news">
+                                        <div>
+                                            <h2>{{ news.title | striptags | slice(0,50) }}</h2>
+                                        </div>
                                         <i class="fas fa-chevron-right"></i>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             {% endfor %}
                         </div>
                         <h2>Nos réseaux sociaux</h2>

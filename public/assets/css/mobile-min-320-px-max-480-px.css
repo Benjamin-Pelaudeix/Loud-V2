@@ -69,6 +69,7 @@
 
     .container h1 {
         font-size: 20px;
+        text-align: center;
     }
 
     .container h2 {
@@ -102,5 +103,58 @@
 
     #last-news-flex {
         flex-direction: column;
+    }
+
+    .last-news-link {
+        width: 100%;
+    }
+
+    .last-news .badges, .news .badges {
+        display: none;
+    }
+
+    .column {
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    .news-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news, .event {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    #social-flex, .events-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email {
+        display: none;
+    }
+
+    .news-content-photo {
+        display: none;
+    }
+
+    .news-content div {
+        margin-top: 1em;
+    }
+
+    .return {
+        display: none;
+    }
+
+    .link-button {
+        font-size: 14px;
+    }
+
+    .news {
+        height: 10em;
     }
 }
