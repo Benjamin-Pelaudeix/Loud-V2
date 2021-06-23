@@ -1,6 +1,6 @@
 @import '_root.css';
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 1170px) {
 
     header {
         padding: 1em 1em;
@@ -64,7 +64,7 @@
     }
 
     body .container {
-        padding: 2em 2em;
+        padding: 2em 2em 3em;
     }
 
     .container h1 {
