@@ -13,4 +13,4 @@ Ce projet de développement web consiste en la création d'un nouveau site vitri
 - PHP
 - Symfony
 
-**Retrouvez le site à l'adresse suivante ![https://loudesport.eu]**
+**Retrouvez le site à l'adresse suivante https://loudesport.eu**
