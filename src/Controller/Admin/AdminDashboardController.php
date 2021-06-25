@@ -56,7 +56,8 @@ class AdminDashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Espace administrateur - Loud');
+            ->setTitle('Espace administrateur - Loud')
+            ->setFaviconPath('/assets/img/logo/favicon.ico');
     }
 
     public function configureMenuItems(): iterable
