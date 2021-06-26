@@ -91,6 +91,7 @@
 
     .last-news {
         width: 100%;
+        height: fit-content;
     }
 
     .last-news img {
@@ -99,6 +100,8 @@
 
     .last-news .news-infos {
         position: relative;
+        padding: 2em 0;
+        text-align: center;
     }
 
     #last-news-flex {
