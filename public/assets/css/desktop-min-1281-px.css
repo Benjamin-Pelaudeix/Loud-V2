@@ -432,8 +432,8 @@ margin: 1.5em 0;
 /* news */
 .news {
     border: 1px solid var(--main-red-color);
-    min-width: 25em;
-    max-width: 25em;
+    min-width: 22.5em;
+    max-width: 22.5em;
     margin-bottom: 1em;
     margin-right: 1em;
     background-color: var(--white-color);
@@ -480,6 +480,7 @@ margin: 1.5em 0;
     flex-direction: row;
     justify-content: left;
     align-items: center;
+    overflow-x: scroll;
 }
 
 .badges {
