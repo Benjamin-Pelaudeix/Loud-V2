@@ -512,13 +512,6 @@ margin: 1.5em 0;
     padding-bottom: 1em;
 }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 22em);
-    grid-template-rows: 20em;
-    grid-gap: 1em;
-}
-
 /* contact */
 #social-flex {
     margin-top: 1em;
