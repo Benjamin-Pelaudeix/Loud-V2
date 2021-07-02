@@ -481,6 +481,7 @@ margin: 1.5em 0;
     justify-content: left;
     align-items: center;
     overflow-x: scroll;
+    flex-wrap: wrap;
 }
 
 .badges {
