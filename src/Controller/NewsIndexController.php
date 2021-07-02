@@ -29,9 +29,9 @@ class NewsIndexController extends AbstractController
      */
     public function index(): Response
     {
-        $categories = $this->entityManager->getRepository(Category::class)->findAll();
+        $news = $this->entityManager->getRepository(News::class)->findBy(array(), array('createdAt' => 'DESC'), 30);
         return $this->render('news_index/index.html.twig', [
-            'categories' => $categories
+            'news' => $news
         ]);
     }
 }

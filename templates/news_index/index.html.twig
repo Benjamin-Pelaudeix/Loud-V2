@@ -7,27 +7,24 @@
 {% block body %}
     <div class="container">
         <h1>Noos actualités</h1>
-        {% for category in categories | slice(0,4) | sort((a,b) => a.name > b.name) %}
-            {% if category.news | length > 0 %}
-                <h2 class="category-name">{{ category.name }}</h2>
-                <div class="news-flex">
-                    {% for new in category.news | slice(0,4) %}
-                        <a href="{{ path('news_detail', { slug: new.slug }) }}">
-                            <div class="news">
-                                <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
-                                <div class="news-infos">
-                                    <h2>{{ new.title }}</h2>
-                                    <div class="badges">
-                                        {% for category in new.category %}
-                                            <p class="badge">{{ category.name }}</p>
-                                        {% endfor %}
-                                    </div>
+        <div class="news-grid">
+            {% for new in news %}
+                <div class="news">
+                    <a href="{{ path('news_detail', { slug: new.slug }) }}">
+                        <div class="news">
+                            <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
+                            <div class="news-infos">
+                                <h2>{{ new.title }}</h2>
+                                <div class="badges">
+                                    {% for category in new.category %}
+                                        <p class="badge">{{ category.name }}</p>
+                                    {% endfor %}
                                 </div>
                             </div>
-                        </a>
-                    {% endfor %}
+                        </div>
+                    </a>
                 </div>
-            {% endif %}
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
