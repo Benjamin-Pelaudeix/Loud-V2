@@ -7,7 +7,7 @@
 {% block body %}
     <div class="container">
         <h1>Noos actualités</h1>
-        <div class="news-flex">
+        <div class="news-grid">
             {% for new in news %}
                 <div class="news">
                     <a href="{{ path('news_detail', { slug: new.slug }) }}">
