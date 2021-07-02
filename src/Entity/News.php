@@ -48,11 +48,6 @@ class News
     private $author;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isImportant;
-
-    /**
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
@@ -144,34 +139,9 @@ class News
         return $this;
     }
 
-    public function getIsImportant(): ?bool
-    {
-        return $this->isImportant;
-    }
-
-    public function setIsImportant(bool $isImportant): self
-    {
-        $this->isImportant = $isImportant;
-
-        return $this;
-    }
-
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
-    public function updatedTimestamps(): void
-    {
-        $dateTimeNow = new DateTime('now');
-        $this->setUpdatedAt($dateTimeNow);
-        if ($this->getCreatedAt() === null) {
-            $this->setCreatedAt($dateTimeNow);
-        }
-    }
-
     public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->createdAt ?? new DateTime('now');
+        return $this->createdAt;
     }
 
     public function setCreatedAt(\DateTimeInterface $createdAt): self
