@@ -1,5 +1,15 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^test.loudesport.eu$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.test.loudesport.eu$
+RewriteCond %{HTTP_HOST} ^loudesport.eu$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.loudesport.eu$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*)$ /public/$1 [L]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:loudesport.eu
+RewriteEngine on
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} (www\.)?loudesport.eu
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:loudesport.eu
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:loudesport.eu
+Header always set Content-Security-Policy: upgrade-insecure-requests
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW UPGRADE_INSECURE_REQUESTS:loudesport.eu
