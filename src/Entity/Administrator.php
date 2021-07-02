@@ -131,9 +131,9 @@ class Administrator implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->login;
     }
 
-    public function getUsername(): ?string
+    public function getUsername()
     {
-        return $this->getLogin();
+        $this->getLogin();
     }
 
 }
