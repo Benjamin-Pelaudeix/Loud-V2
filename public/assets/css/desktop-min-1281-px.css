@@ -514,7 +514,7 @@ margin: 1.5em 0;
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(3, 22.5em);
+    grid-template-columns: repeat(3, 22em);
     grid-template-rows: 20em;
     grid-gap: 1em;
 }

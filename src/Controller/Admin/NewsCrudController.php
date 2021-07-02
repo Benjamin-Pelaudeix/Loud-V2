@@ -55,7 +55,6 @@ class NewsCrudController extends AbstractCrudController
             TextEditorField::new('body', 'Contenu')
                 ->setRequired(true),
             ImageField::new('photo', 'Photo')
-                ->setRequired(true)
                 ->setBasePath('uploads/article-photo')
                 ->setUploadDir('public/uploads/article-photo')
                 ->setUploadedFileNamePattern('[randomhash].[extension]'),
@@ -63,9 +62,7 @@ class NewsCrudController extends AbstractCrudController
                 ->setRequired(true),
             AssociationField::new('author', 'Auteur')
                 ->setRequired(true),
-            BooleanField::new('isImportant', 'Afficher sur l\'accueil'),
             DateTimeField::new('createdAt', 'Créé le')
-                ->setRequired(true)
                 ->setTimezone('Europe/Paris')
         ];
     }
