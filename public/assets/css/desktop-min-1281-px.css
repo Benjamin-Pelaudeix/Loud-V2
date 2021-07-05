@@ -475,6 +475,11 @@ margin: 1.5em 0;
     text-align: justify;
 }
 
+.news-content h1 {
+    font-family: var(--header-title-font);
+    color: var(--main-red-color);
+}
+
 .news-flex {
     display: flex;
     flex-direction: row;
