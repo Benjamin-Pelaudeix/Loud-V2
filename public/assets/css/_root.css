@@ -29,14 +29,7 @@
     --white-color: #FFFFFF;
     --black-color: #000000;
     --black-transparent-color: rgba(0,0,0,.8);
-    /* fonts */
-    --header-title-font: Montserrat-Bold, sans-serif;
-    --nav-link-font: Montserrat, sans-serif;
-    --body-text-font: Montserrat, sans-serif;
-    --body-header-font: Stretch, sans-serif;
-    --body-subtitle-font: Montserrat-Bold, sans-serif;
-    --footer-title-font: Stretch, sans-serif;
-    --footer-text-font: Montserrat, sans-serif;
+    --white-transparent-color: rgba(255, 255, 255, .3);
 }
 
 * {

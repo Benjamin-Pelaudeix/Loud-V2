@@ -8,8 +8,13 @@ const nav = document.getElementsByClassName('nav')[0]
 
 icon.addEventListener('click', () => {
     if (icon.classList.contains('fa-bars')) {
-        nav.style.left = '-30vw'
-        icon.classList.toggle('fa-times')
+        if (window.innerWidth > 600) {
+            nav.style.left = '-30vw'
+            icon.classList.toggle('fa-times')
+        } else {
+            nav.style.left = '-100vw'
+            icon.classList.toggle('fa-times')
+        }
     }
     if (icon.classList.contains('fa-times')) {
         nav.style.left = '0'

@@ -1,0 +1,18 @@
+@media screen and (max-width: 600px) {
+    .header .header_brand {
+        font-size: 18pt;
+    }
+
+    .header .header_menu_icon {
+        font-size: 18pt;
+    }
+
+    .nav {
+        width: 100vw;
+        left: -100vw;
+    }
+
+    .nav .nav_list_item:hover {
+        left: 0;
+    }
+}
