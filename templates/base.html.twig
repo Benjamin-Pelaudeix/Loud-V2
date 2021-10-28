@@ -6,67 +6,97 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="esport, loud esport, jeux vidéos, compétition, trackmania, tm, zrt, zrt cup, tmgl, ogl, hearthstone, hs, valorant, valo, riot, rocket league, rl, rlcs, smash, smash bros, smash bros ultimate, pc">
         <title>Loud Esport - {% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="/assets/css/desktop-min-1281-px.css">
-        <link rel="stylesheet" href="/assets/css/mobile-min-320-px-max-480-px.css">
-        <link rel="shortcut icon" href="/assets/img/logo/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="{{ asset('assets/css/_root.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/desktop-min-1281-px.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/mobile-min-320-px-max-480-px.css') }}">
+        <link rel="shortcut icon" href="{{ asset('assets/img/logo/favicon.ico') }}" type="image/x-icon">
         <script src="https://kit.fontawesome.com/e5e7c64170.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header>
-            <div id="header-logo">
-                <a href="{{ path('home') }}" class="nav-item">
-                    <img src="/assets/img/logo/loudrouge.png" alt="Loud logo">
-                </a>
-                <nav id="desktop-nav">
-                    <ul>
-                        <li>
-                            <a href="{{ path('news_index') }}" class="nav-item">Actualités</a>
+    <body class="body">
+        <header class="header">
+            <i class="fas fa-bars header_menu_icon"></i>
+            <h1 class="header_brand">Looud</h1>
+        </header>
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_list_item">
+                    <a href="#" class="nav_link nav_link--main">
+                        Actualités
+                    </a>
+                </li>
+                <li class="nav_list_item">
+                    <p class="nav_link nav_link--main">
+                        Club
+                    </p>
+                    <ul class="nav_list nav_list--sub">
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Histoire
+                            </a>
                         </li>
-                        <li>
-                            <a href="{{ path('history') }}" class="nav-item">Histoire</a>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Organigramme
+                            </a>
                         </li>
-                        <li>
-                            <a href="{{ path('teams') }}" class="nav-item">Équipes</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact') }}" class="nav-item">Contact</a>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Partenaires
+                            </a>
                         </li>
                     </ul>
-                </nav>
-            </div>
-            <i class="fas fa-bars" id="mobile-dropdown-link"></i>
-        </header>
-        <nav id="mobile-nav">
-            <ul>
-                <li>
-                    <a href="{{ path('home') }}" class="nav-item">Accueil</a>
                 </li>
-                <li>
-                    <a href="{{ path('history') }}" class="nav-item">Histoire</a>
+                <li class="nav_list_item">
+                    <p class="nav_link nav_link--main">
+                        Équipes
+                    </p>
+                    <ul class="nav_list nav_list--sub">
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Hearthstone
+                            </a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Rainbow 6 Siege
+                            </a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Rocket League
+                            </a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Smash Bros Ultimate
+                            </a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Trackmania
+                            </a>
+                        </li>
+                        <li class="nav_list_item">
+                            <a href="#" class="nav_link nav_link--sub">
+                                Valorant
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="{{ path('news_index') }}" class="nav-item">Actualités</a>
+                <li class="nav_list_item">
+                    <a href="#" class="nav_link nav_link--main">
+                        Boutique
+                    </a>
                 </li>
-                <li>
-                    <a href="{{ path('teams') }}" class="nav-item">Équipes</a>
-                </li>
-                <li>
-                    <a href="{{ path('contact') }}" class="nav-item">Contact</a>
+                <li class="nav_list_item">
+                    <a href="#" class="nav_link nav_link--main">
+                        Contact
+                    </a>
                 </li>
             </ul>
         </nav>
-        {% block body %}{% endblock %}
-        <footer>
-            <div id="footer-logo">
-                <h1>Looud</h1>
-                <p>Tous droits réservés - <span id="current-year"></span> - <a href="/assets/docs/mentions-legales.pdf">Mentions légales</a> - Design :
-                    <a href="https://www.behance.net/maximedegallaix">Kysho</a> - Réalisation : <a href="https://github.com/Benjamin-Pelaudeix">Ben</a></p>
-            </div>
-        </footer>
         <!-- javascript -->
-        <script src="/assets/js/nav-mobile.js"></script>
-        <script src="/assets/js/footer.js"></script>
-        <script src="/assets/js/last-news-hover.js"></script>
+        <script src="{{ asset('assets/js/nav.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
