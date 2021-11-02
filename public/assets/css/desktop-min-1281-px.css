@@ -3,9 +3,6 @@
  */
 
 .body {
-    background-image: url("../img/background/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -26,6 +23,12 @@
     margin-bottom: 1rem;
 }
 
+.text_body {
+    font-family: Montserrat, sans-serif;
+    font-size: 11pt;
+    text-align: justify;
+}
+
 /**
     HEADER
  */
@@ -44,6 +47,7 @@
     font-size: 24pt;
     margin-right: 1.5rem;
     color: var(--main-red-color);
+    transition: color .5s ease-in-out;
 }
 
 .header .header_brand {
@@ -52,6 +56,7 @@
     text-transform: uppercase;
     font-size: 28pt;
     text-decoration: none;
+    transition: color .5s ease-in-out;
 }
 
 /**
@@ -63,9 +68,6 @@
     position: fixed;
     top: 0;
     left: -30vw;
-    background-image: url("../img/background/background.jpg");
-    background-size: cover;
-    background-position: left;
     height: 100vh;
     width: 30vw;
     display: flex;
@@ -73,6 +75,7 @@
     justify-content: space-between;
     z-index: 0;
     transition: all .7s ease-in-out;
+    background-color: var(--main-red-color);
 }
 
 .nav_list, .nav_list--sub {
@@ -81,7 +84,7 @@
 }
 
 .nav_list--sub {
-    border-left: 1px solid var(--main-red-color);
+    border-left: 1px solid white;
     padding-left: .5rem;
 }
 
@@ -91,7 +94,7 @@
 
 .nav_link {
     font-family: Stretch, sans-serif;
-    color: var(--main-red-color);
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 14pt;
@@ -99,7 +102,7 @@
 
 .nav_link--sub {
     font-family: Montserrat, sans-serif;
-    color: var(--main-red-color);
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 12pt;
@@ -123,10 +126,10 @@
 
 .nav_info {
     font-family: Montserrat, sans-serif;
-    color: var(--main-red-color);
+    color: white;
     font-size: 10pt;
     text-decoration: none;
-    border-right: 1px solid var(--main-red-color);
+    border-right: 1px solid white;
     padding-right: 1rem;
     padding-left: 1rem;
 }
@@ -143,5 +146,25 @@
     height: 10pt;
     width: auto;
     padding: 0 1rem;
-    border-right: 1px solid var(--main-red-color);
+    border-right: 1px solid white;
+}
+
+/**
+    LEGAL
+ */
+.legal_msg {
+    font-family: Montserrat, sans-serif;
+    font-size: 8pt;
+    margin-bottom: 1rem;
+}
+
+.legal strong {
+    color: var(--main-red-color);
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 14pt;
+}
+
+.legal blockquote {
+    border-left: 3px solid var(--main-red-color);
+    padding-left: 1rem;
 }
