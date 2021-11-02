@@ -15,86 +15,61 @@
     <body class="body">
         <header class="header">
             <i class="fas fa-bars header_menu_icon"></i>
-            <h1 class="header_brand">Looud</h1>
+            <a href="{{ path('home') }}" class="header_brand">Looud</a>
         </header>
         <nav class="nav">
             <ul class="nav_list">
-                <li class="nav_list_item">
-                    <a href="#" class="nav_link nav_link--main">
-                        Actualités
-                    </a>
+                <li class="nav_item--main">
+                    <a href="{{ path('news_index') }}" class="nav_link">Actualités</a>
                 </li>
-                <li class="nav_list_item">
-                    <p class="nav_link nav_link--main">
-                        Club
-                    </p>
-                    <ul class="nav_list nav_list--sub">
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Histoire
-                            </a>
+                <li class="nav_item--main">
+                    <p class="nav_link">Club</p>
+                    <ul class="nav_list--sub">
+                        <li class="nav_item--sub">
+                            <a href="{{ path('history') }}" class="nav_link--sub">Histoire</a>
                         </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Organigramme
-                            </a>
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Staff</a>
                         </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Partenaires
-                            </a>
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Sponsors</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav_list_item">
-                    <p class="nav_link nav_link--main">
-                        Équipes
-                    </p>
-                    <ul class="nav_list nav_list--sub">
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Hearthstone
-                            </a>
+                <li class="nav_item--main">
+                    <p class="nav_link">Équipes</p>
+                    <ul class="nav_list--sub">
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Hearthstone</a>
                         </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Rainbow 6 Siege
-                            </a>
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Rocket League</a>
                         </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Rocket League
-                            </a>
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Smash Bros Ultimate</a>
                         </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Smash Bros Ultimate
-                            </a>
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Trackmania</a>
                         </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Trackmania
-                            </a>
-                        </li>
-                        <li class="nav_list_item">
-                            <a href="#" class="nav_link nav_link--sub">
-                                Valorant
-                            </a>
+                        <li class="nav_item--sub">
+                            <a href="#" class="nav_link--sub">Valorant</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav_list_item">
-                    <a href="#" class="nav_link nav_link--main">
-                        Boutique
-                    </a>
+                <li class="nav_item--main">
+                    <a href="#" class="nav_link">Boutique</a>
                 </li>
-                <li class="nav_list_item">
-                    <a href="#" class="nav_link nav_link--main">
-                        Contact
-                    </a>
+                <li class="nav_item--main">
+                    <a href="{{ path('contact') }}" class="nav_link">Contact</a>
                 </li>
             </ul>
+            <div class="nav_infos">
+                <p class="nav_info">© Loud 2021</p>
+                <img class="nav_info_img" src="{{ asset('assets/img/logo/loudrouge.png') }}" alt="Logo Loud">
+                <a href="#" class="nav_info">Mentions légales</a>
+            </div>
         </nav>
+        {% block body %}{% endblock %}
         <!-- javascript -->
         <script src="{{ asset('assets/js/nav.js') }}"></script>
         {% block javascripts %}{% endblock %}
