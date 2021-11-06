@@ -5,63 +5,33 @@
 {% block title %}Notre histoire{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div id="history">
-            <h1>Histooire du club</h1>
-            <div id="history-text">
-                {{ history.content | raw }}
-            </div>
+    <section class="page_title">
+        <h2 class="title--page">Histoire</h2>
+    </section>
+    <section class="container history">
+        <h2 class="title">Nootre histoire</h2>
+        <article class="text_body">
+            {{ history.content | raw }}
+        </article>
+    </section>
+    <section class="container timeline">
+        <h2 class="title">Nootre parcours</h2>
+        <div class="events">
+            <article class="event">
+                <p class="event_date">2018</p>
+                <h3 class="event_name">Création</h3>
+            </article>
+            <article class="event">
+                <p class="event_date">2020</p>
+                <h3 class="event_name">Premier Master Tour</h3>
+            </article>
+            <article class="event">
+                <p class="event_date">2021</p>
+                <h3 class="event_name">TMGL:C</h3>
+            </article>
         </div>
-        <div id="staff">
-            <h1>Nootre équipe dirigeante</h1>
-            {% for section in sections %}
-                {% if section.members | length > 0 %}
-                <h2>{{ section.name }}</h2>
-                <div class="members">
-                    {% for member in section.members %}
-                    <div class="member">
-                        <div class="member-photo">
-                            {% if member.photo %}
-                                <img src="/uploads/member-photo/{{ member.photo }}" alt="Photo {{ member.gamename }}">
-                            {% else %}
-                                <img src="{{ asset('assets/img/logo/loudrouge.png') }}" alt="Logo Loud">
-                            {% endif %}
-                        </div>
-                        <div class="member-infos">
-                            <div class="member-info-names">
-                                <h1 class="member-name">{{ member.gamename }}</h1>
-                                <h2 class="member-full-name">
-                                    {% if member.lastname %}
-                                        {{ member.firstname }} {{ member.lastname | upper }}<br>
-                                    {% endif %}
-                                    {{ member.role.name }}
-                                </h2>
-                            </div>
-                            <hr>
-                            <div class="member-socials">
-                                {% if member.twitter %}
-                                <a href="{{ member.twitter }}">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                {% endif %}
-                                {% if member.email %}
-                                <a href="mailto:{{ member.email }}">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                                {% endif %}
-                                {% if member.discord %}
-                                <a href="{{ member.discord }}">
-                                    <i class="fab fa-discord"></i>
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        </div>
-    </div>
+    </section>
+    <section class="container photos">
+        <h2 class="title">Nootre médiathèque</h2>
+    </section>
 {% endblock %}

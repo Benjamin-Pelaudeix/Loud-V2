@@ -19,8 +19,14 @@
     font-family: Stretch, sans-serif;
     font-size: 16pt;
     text-transform: uppercase;
-    color: var(--main-red-color);
     margin-bottom: 1rem;
+}
+
+.title--page {
+    font-family: Stretch, sans-serif;
+    font-size: 36pt;
+    text-transform: uppercase;
+    color: var(--main-red-color);
 }
 
 .text_body {
@@ -39,7 +45,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 1rem 2rem;
-    z-index: 100;
+    z-index: 1000;
     position: relative;
 }
 
@@ -73,7 +79,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 0;
+    z-index: 100;
     transition: all .7s ease-in-out;
     background-color: var(--main-red-color);
 }
@@ -113,8 +119,8 @@
 }
 
 .nav_link--sub:hover {
-    background-color: var(--main-red-color);
-    color: white;
+    background-color: white;
+    color: var(--main-red-color);
     left: 15px;
     transition: left .5s ease-in-out;
 }
@@ -150,6 +156,157 @@
 }
 
 /**
+    PAGE_TITLE
+ */
+.page_title {
+    height: 20rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/background/background.jpg");
+    background-size: cover;
+}
+
+/**
+    HISTORY
+ */
+.history {
+    background-color: var(--main-red-color);
+    color: white;
+}
+
+/**
+    TIMELINE
+ */
+.timeline {
+    color: var(--main-red-color);
+}
+
+.events {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.event {
+    width: 30%;
+    text-align: center;
+    padding: 4rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.event_date {
+    font-family: Montserrat, sans-serif;
+}
+
+.event_name {
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 20pt;
+}
+
+/**
+    PHOTOS
+ */
+.photos {
+    color: var(--main-red-color);
+}
+
+/**
+    STAFF
+ */
+.directing_team {
+    background-color: var(--main-red-color);
+    color: white;
+}
+
+.staff {
+    color: var(--main-red-color);
+}
+
+.section_name {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 2rem;
+    background-color: var(--main-red-color);
+    width: fit-content;
+    color: white;
+    padding: .5rem 2rem;
+}
+
+.members {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+    column-gap: 5rem;
+    margin-bottom: 3rem;
+}
+
+.members:last-child {
+    margin-bottom: 0;
+}
+
+.member {
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem 1.5rem 3rem 0;
+    border-top: 3px solid var(--main-red-color);
+}
+
+.member:hover {
+    transform: scale(1.05);
+    transition: .3s all ease-in-out;
+}
+
+.member_img {
+    height: 10rem;
+    width: auto;
+}
+
+.member_name {
+    font-family: Montserrat-Bold, sans-serif;
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+.member_role {
+    font-family: Montserrat, sans-serif;
+    background-color: var(--main-red-color);
+    color: white;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    padding: .5rem 2rem;
+    border-radius: 15px;
+    border-left: 3px solid white;
+}
+
+.member_socials {
+    margin-top: .5rem;
+}
+
+.social_link {
+    color: var(--main-red-color);
+    text-decoration: none;
+    padding: 0 .3rem;
+    font-size: 14pt;
+}
+
+/**
+    ORGANIZATION
+ */
+.organization {
+    color: var(--main-red-color);
+}
+
+/**
     LEGAL
  */
 .legal_msg {
@@ -167,4 +324,23 @@
 .legal blockquote {
     border-left: 3px solid var(--main-red-color);
     padding-left: 1rem;
+}
+
+/**
+    FOOTER
+ */
+.footer {
+    text-align: center;
+    padding: .5rem 0;
+}
+
+.footer_msg {
+    font-family: Montserrat, sans-serif;
+    color: var(--main-red-color);
+    font-size: 8pt;
+}
+
+.footer_link {
+    text-decoration: underline;
+    color: var(--main-red-color);
 }

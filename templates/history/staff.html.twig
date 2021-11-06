@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre staff{% endblock %}
+
+{% block body %}
+    <section class="page_title">
+        <h2 class="title--page">Stafff</h2>
+    </section>
+    <section class="container directing_team">
+        <h2 class="title">Notre équipe dirigeante</h2>
+        <p class="text_body">Composée de 5 membres passionnés par la compétition, ils gèrent mla gestion, la trésorerie et l'intendance de la structure d'une main de maître. Experts en communication, graphisme ou encore développement, ils permettent la vie de la structure au quotidien.</p>
+    </section>
+    <section class="container staff">
+        <h2 class="title">Le stafff</h2>
+        {% for section in staff %}
+            <h3 class="section_name">{{ section.name }}</h3>
+            <div class="members">
+                {% for member in section.members %}
+                    <figure class="member">
+                        <img class="member_img" src="{{ asset('assets/img/shop/maillot.png') }}" alt="Maillot Loud Esport">
+                        <figcaption>
+                            <h3 class="member_name">{{ member.gamename }}</h3>
+                            <p class="member_role">{{ member.role }}</p>
+                            <div class="member_socials">
+                                {% if member.twitter %}
+                                    <a href="{{ member.twitter }}" class="social_link">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                {% endif %}
+                                {% if member.twitch %}
+                                    <a href="{{ member.twitch }}" class="social_link">
+                                        <i class="fab fa-twitch"></i>
+                                    </a>
+                                {% endif %}
+                                {% if member.discord %}
+                                    <a href="#" class="social_link">
+                                        <i class="fab fa-discord"></i>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </figcaption>
+                    </figure>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </section>
+    <section class="container organization">
+        <h2 class="title">Notre organigramme</h2>
+    </section>
+{% endblock %}

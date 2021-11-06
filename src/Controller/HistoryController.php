@@ -28,11 +28,20 @@ class HistoryController extends AbstractController
      */
     public function index(): Response
     {
-        $sections = $this->entityManager->getRepository(Section::class)->findBy(array(), array(), 4);
         $historyContent = $this->entityManager->getRepository(Content::class)->findOneByName('history');
         return $this->render('history/index.html.twig', [
-            'sections' => $sections,
             'history' => $historyContent
+        ]);
+    }
+
+    /**
+     * @Route("/staff", name="staff")
+     */
+    public function staff(): Response
+    {
+        $staff = $this->entityManager->getRepository(Section::class)->findBy(array(), array(), 4);
+        return $this->render('history/staff.html.twig', [
+            'staff' => $staff
         ]);
     }
 }
