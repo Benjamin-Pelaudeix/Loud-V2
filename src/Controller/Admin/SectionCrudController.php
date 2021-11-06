@@ -7,6 +7,9 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class SectionCrudController extends AbstractCrudController
@@ -41,7 +44,15 @@ class SectionCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name', 'Libellé')
+            TextField::new('name', 'Libellé'),
+            SlugField::new('slug', 'Slug')
+                ->setRequired(true)
+                ->setTargetFieldName('name'),
+            TextareaField::new('description', 'Description'),
+            ImageField::new('logotype', 'Logo')
+                ->setBasePath('uploads/sections-logo')
+                ->setUploadDir('public/uploads/sections-logo')
+                ->setUploadedFileNamePattern('[randomhash].[extension]'),
         ];
     }
 }

@@ -292,6 +292,10 @@
     margin-top: .5rem;
 }
 
+.member_flag {
+    height: 3rem;
+}
+
 .social_link {
     color: var(--main-red-color);
     text-decoration: none;
@@ -303,6 +307,23 @@
     ORGANIZATION
  */
 .organization {
+    color: var(--main-red-color);
+}
+
+/**
+    TEAM
+ */
+.team_logo {
+    height: 10rem;
+    width: auto;
+}
+
+.team_presentation {
+    background-color: var(--main-red-color);
+    color: white;
+}
+
+.team_members {
     color: var(--main-red-color);
 }
 

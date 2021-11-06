@@ -23,13 +23,13 @@ class TeamsController extends AbstractController
     }
 
     /**
-     * @Route("/equipes", name="teams")
+     * @Route("/equipes/{slug}", name="teams")
      */
-    public function index(): Response
+    public function index(string $slug): Response
     {
-        $sections = $this->entityManager->getRepository(Section::class)->findBy(array(), array(), null, 4);
+        $section = $this->entityManager->getRepository(Section::class)->findOneBySlug($slug);
         return $this->render('teams/index.html.twig', [
-            'sections' => $sections
+            'section' => $section
         ]);
     }
 }
