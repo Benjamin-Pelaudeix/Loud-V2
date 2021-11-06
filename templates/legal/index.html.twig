@@ -3,8 +3,10 @@
     {% block title %}Mentions légales{% endblock %}
 
 {% block body %}
+    <section class="page_title">
+        <h2 class="title--page">Mentions légales</h2>
+    </section>
     <section class="container">
-        <h2 class="title">Mentions légales</h2>
         <p class="legal_msg">(En vigueur au {{ date('now') | date('d/m/Y') }})</p>
         <article class="text_body legal">{{ content.content | raw }}</article>
     </section>

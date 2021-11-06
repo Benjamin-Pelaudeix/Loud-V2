@@ -32,7 +32,7 @@
                             <a href="{{ path('staff') }}" class="nav_link--sub">Staff</a>
                         </li>
                         <li class="nav_item--sub">
-                            <a href="#" class="nav_link--sub">Sponsors</a>
+                            <a href="{{ path('sponsor') }}" class="nav_link--sub">Sponsors</a>
                         </li>
                     </ul>
                 </li>
@@ -66,7 +66,7 @@
             <div class="nav_infos">
                 <p class="nav_info">© Loud 2021</p>
                 <img class="nav_info_img" src="{{ asset('assets/img/logo/loudblanc.png') }}" alt="Logo Loud">
-                <a href="#" class="nav_info">Mentions légales</a>
+                <a href="{{ path('legal') }}" class="nav_info">Mentions légales</a>
             </div>
         </nav>
         {% block body %}{% endblock %}
