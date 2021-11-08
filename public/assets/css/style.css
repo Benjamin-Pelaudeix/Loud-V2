@@ -289,7 +289,7 @@
 }
 
 .member_socials {
-    margin-top: .5rem;
+    margin-top: .3rem;
 }
 
 .member_flag {
@@ -324,6 +324,42 @@
 }
 
 .team_members {
+    color: var(--main-red-color);
+}
+
+/**
+    SPONSORS
+ */
+.sponsor_presentation {
+    background-color: var(--main-red-color);
+    color: white;
+}
+
+.buttons {
+    margin-top: 2rem;
+}
+
+.button {
+    color: white;
+    font-family: Montserrat-Bold, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: .5rem 2rem;
+    margin-right: 1rem;
+    border-radius: 15px;
+}
+
+.button>.fas {
+    margin-right: .5rem;
+}
+
+.button:hover {
+    background-color: white;
+    color: var(--main-red-color);
+}
+
+.our_sponsors {
     color: var(--main-red-color);
 }
 

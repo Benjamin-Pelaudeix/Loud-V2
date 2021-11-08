@@ -1,0 +1,19 @@
+@media screen and (min-width: 1339px) {
+    /**
+        MEMBERS
+     */
+    .members {
+        justify-content: space-between;
+    }
+
+    .member {
+        width: 40%;
+    }
+
+    /**
+        TEAMS
+     */
+    .team_logo {
+        height: 7rem;
+    }
+}
