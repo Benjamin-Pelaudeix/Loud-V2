@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos sponsors{% endblock %}
+
+{% block body %}
+    <section class="page_title">
+        <h2 class="title--page">Nos sponsors</h2>
+    </section>
+    <section class="container sponsor_presentation">
+        <h2 class="title">Pourquoi devenir notre sponsor</h2>
+        <p class="text_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem dolorum est eum illum iusto libero neque nihil odit officia praesentium quisquam repellat repellendus, soluta totam unde voluptas voluptate, voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam, autem delectus excepturi illo molestias nesciunt placeat quia quis reiciendis. Alias animi commodi cumque eum incidunt inventore necessitatibus nobis veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam autem consectetur cupiditate deleniti dicta enim esse ipsa laboriosam laborum molestiae odio omnis quas quos rerum similique sint sunt veniam?</p>
+        <div class="buttons">
+            <a href="#" class="button">
+                <i class="fas fa-envelope"></i>
+                Nous contacter
+            </a>
+            <a href="#" class="button">
+                <i class="fas fa-file-alt"></i>
+                Notre dossier
+            </a>
+        </div>
+    </section>
+    <section class="container our_sponsors">
+        <h2 class="title">Ils nous font confiance</h2>
+        <div class="sponsors">
+            {% for sponsor in sponsors %}
+                <a href="{{ sponsor.link }}" class="sponsor-link sponsor">
+                    <img class="sponsor_img" src="{{ asset('uploads/sponsors-logo/' ~ sponsor.logotype) }}" alt="Logo de {{ sponsor.name }}">
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

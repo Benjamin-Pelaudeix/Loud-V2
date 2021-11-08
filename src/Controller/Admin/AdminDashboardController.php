@@ -15,6 +15,7 @@ use App\Entity\News;
 use App\Entity\Role;
 use App\Entity\Section;
 use App\Entity\Social;
+use App\Entity\Sponsor;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -76,6 +77,7 @@ class AdminDashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('Sections', 'fas fa-users', Section::class);
             yield MenuItem::linkToCrud('Rôles', 'fas fa-crown', Role::class);
             yield MenuItem::linkToCrud('Nationalités', 'fas fa-globe', Nationality::class);
+            yield MenuItem::linkToCrud('Sponsors', 'fas fa-money-bill-wave', Sponsor::class);
         }
         if ($role == 'ROLE_ESPORT' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Esport');
