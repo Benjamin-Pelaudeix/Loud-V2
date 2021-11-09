@@ -14,14 +14,14 @@
     </section>
     <section class="container team_members">
         <h2 class="title">Nos joueurs</h2>
-        <div class="members">
+        <div class="cards">
             {% for member in section.members %}
-                <figure class="member">
-                    <img class="member_img" src="{{ asset('assets/img/shop/maillot.png') }}" alt="Maillot Loud Esport">
+                <figure class="card">
+                    <img class="card_img" src="{{ asset('assets/img/shop/maillot.png') }}" alt="Maillot Loud Esport">
                     <figcaption>
-                        <h3 class="member_name">{{ member.gamename }}</h3>
-                        <p class="member_role">{{ member.role }}</p>
-                        <img class="member_flag" src="{{ asset('assets/img/flags/' ~ member.nationality.flag) }}" alt="Nationalité {{ member.gamename }}">
+                        <h3 class="card_name">{{ member.gamename }}</h3>
+                        <p class="card_role">{{ member.role }}</p>
+                        <img class="card_flag" src="{{ asset('assets/img/flags/' ~ member.nationality.flag) }}" alt="Nationalité {{ member.gamename }}">
                     </figcaption>
                 </figure>
             {% endfor %}

@@ -22,10 +22,10 @@
     </section>
     <section class="container our_sponsors">
         <h2 class="title">Ils nous font confiance</h2>
-        <div class="sponsors">
+        <div class="cards">
             {% for sponsor in sponsors %}
-                <a href="{{ sponsor.link }}" class="sponsor-link sponsor">
-                    <img class="sponsor_img" src="{{ asset('uploads/sponsors-logo/' ~ sponsor.logotype) }}" alt="Logo de {{ sponsor.name }}">
+                <a href="{{ sponsor.link }}" class="sponsor-link card">
+                    <img class="card_img" src="{{ asset('uploads/sponsors-logo/' ~ sponsor.logotype) }}" alt="Logo de {{ sponsor.name }}">
                 </a>
             {% endfor %}
         </div>

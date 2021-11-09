@@ -2,11 +2,11 @@
     /**
         MEMBERS
      */
-    .members {
+    .cards {
         justify-content: space-between;
     }
 
-    .member {
+    .card {
         width: 40%;
     }
 

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre boutique{% endblock %}
+
+{% block body %}
+    <section class="page_title">
+        <h2 class="title--page">Boutique</h2>
+    </section>
+    <section class="container shop_presentation">
+        <h2 class="title">Pourquoi nous soutenir</h2>
+        <p class="text_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, at, cumque ducimus ea eligendi est et ex fuga incidunt minima obcaecati odit quam, quibusdam quod suscipit temporibus tenetur voluptate voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet enim error iure, natus quibusdam ratione velit. Illum perferendis, unde! Amet delectus laborum odio officiis pariatur porro reiciendis similique voluptas.</p>
+    </section>
+    <section class="container our_products">
+        <h2 class="title">Nos produits</h2>
+        <div class="cards">
+            {% for product in products %}
+                <a class="card_link" href="{{ product.link }}">
+                    <figure class="card">
+                        <img src="{{ asset('/uploads/product-photo/' ~ product.picture) }}" alt="Photo {{ product.name }}" class="card_img">
+                        <figcaption class="card_infos">
+                            <h3 class="card_name">{{ product.name }}</h3>
+                            <p class="card_price">{{ (product.price / 100) | number_format(2, ',', ' ') }} €</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

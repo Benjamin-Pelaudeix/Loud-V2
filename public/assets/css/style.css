@@ -238,7 +238,11 @@
     padding: .5rem 2rem;
 }
 
-.members, .sponsors {
+/**
+    CARDS
+ */
+
+.cards {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -248,11 +252,11 @@
     margin-bottom: 3rem;
 }
 
-.members:last-child, .sponsors:last-child {
+.cards:last-child {
     margin-bottom: 0;
 }
 
-.member, .sponsor {
+.card {
     box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
     text-align: center;
     position: relative;
@@ -263,23 +267,23 @@
     border-top: 3px solid var(--main-red-color);
 }
 
-.member:hover, .sponsor:hover {
+.card:hover {
     transform: scale(1.05);
     transition: .3s all ease-in-out;
 }
 
-.member_img, .sponsor_img {
+.card_img {
     height: 10rem;
     width: auto;
 }
 
-.member_name, .sponsor_name {
+.card_name {
     font-family: Montserrat-Bold, sans-serif;
     text-transform: uppercase;
     font-size: 20pt;
 }
 
-.member_role {
+.card_role {
     font-family: Montserrat, sans-serif;
     background-color: var(--main-red-color);
     color: white;
@@ -291,12 +295,23 @@
     border-left: 3px solid white;
 }
 
-.member_socials {
+.card_socials {
     margin-top: .3rem;
 }
 
-.member_flag {
+.card_flag {
     height: 3rem;
+}
+
+.card_link {
+    text-decoration: none;
+    color: var(--main-red-color);
+    width: 100%;
+}
+
+.card_price {
+    font-family: Montserrat, sans-serif;
+    margin-top: .5rem;
 }
 
 .social_link {
@@ -366,31 +381,21 @@
     color: var(--main-red-color);
 }
 
-.sponsors {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
 .sponsor-link {
     color: var(--main-red-color);
     text-decoration: none;
 }
 
-.sponsor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 5rem;
+/**
+    SHOP
+ */
+.shop_presentation {
+    background-color: var(--main-red-color);
+    color: white;
 }
 
-.sponsor_img {
-    height: 7rem;
-}
-
-.sponsor_name {
-    margin-top: 1rem;
+.our_products {
+    color: var(--main-red-color);
 }
 
 /**

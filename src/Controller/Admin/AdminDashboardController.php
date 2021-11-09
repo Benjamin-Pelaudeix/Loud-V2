@@ -12,6 +12,7 @@ use App\Entity\EventGame;
 use App\Entity\Member;
 use App\Entity\Nationality;
 use App\Entity\News;
+use App\Entity\Product;
 use App\Entity\Role;
 use App\Entity\Section;
 use App\Entity\Social;
@@ -78,6 +79,7 @@ class AdminDashboardController extends AbstractDashboardController
             yield MenuItem::linkToCrud('Rôles', 'fas fa-crown', Role::class);
             yield MenuItem::linkToCrud('Nationalités', 'fas fa-globe', Nationality::class);
             yield MenuItem::linkToCrud('Sponsors', 'fas fa-money-bill-wave', Sponsor::class);
+            yield MenuItem::linkToCrud('Produits', 'fas fa-tshirt', Product::class);
         }
         if ($role == 'ROLE_ESPORT' || $role == 'ROLE_GLOBAL') {
             yield MenuItem::section('Esport');
