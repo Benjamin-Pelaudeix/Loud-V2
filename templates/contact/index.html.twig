@@ -5,40 +5,31 @@
 {% block title %}Nous contacter{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>Noous contacter</h1>
-        {{ contactPresentation.content | raw }}
-        <div id="social-flex">
-            {% for social in socials %}
-            <div class="social">
-                <div class="social-infos">
-                    <h2><i class="fab fa-{{ social.name | lower }}"></i> {{ social.name }}</h2>
-                    <a href="{{ social.link }}" class="link-button">Visiter <i class="fas fa-chevron-right"></i></a>
-                </div>
-                <p>{{ social.accountName }}</p>
-            </div>
-            {% endfor %}
-            <div class="social" id="email">
-                <div class="social-infos">
-                    <h2><i class="fas fa-envelope"></i> E-mail</h2>
-                </div>
-                <div class="social-infos">
-                    <p>Pour toute prise de <span>contact</span> non spécifique, notre adresse <span class="social-span">contact</span> </p>
-                    <a href="mailto:contact@loudesport.eu" class="link-button">Contacter <i class="fas fa-chevron-right"></i></a>
-                </div>
-                <div class="social-infos">
-                    <p>Pour toute demande concernant <span>nos sections</span> et <span>recrutements</span>, notre adresse <span class="social-span">esport</span></p>
-                    <a href="mailto:contact@loudesport.eu" class="link-button">Contacter <i class="fas fa-chevron-right"></i></a>
-                </div>
-                <div class="social-infos">
-                    <p>Pour toute demande concernant <span>les partenariats</span> et <span>sponsors</span>, notre adresse <span class="social-span">partenariats</span></p>
-                    <a href="mailto:partnership@loudesport.eu" class="link-button">Contacter <i class="fas fa-chevron-right"></i></a>
-                </div>
-                <div class="social-infos">
-                    <p>Pour toute demande concernant <span>la communication</span> de l'association, notre adresse <span class="social-span">communication</span></p>
-                    <a href="mailto:benjamin.pelaudeix@loudesport.eu" class="link-button">Contacter <i class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
+    <section class="page_title">
+        <h2 class="title--page">Nous contacter</h2>
+    </section>
+    <section class="container container--red">
+        <h2 class="title">Vous êtes un joueur ou une organisation</h2>
+        <p class="text_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae dicta eum fuga maiores minus unde. Accusamus dolorem eum fuga ipsam minus non possimus quam quo, quos similique sint, suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dignissimos necessitatibus nostrum quidem, tempore temporibus velit voluptatibus! Earum perspiciatis, qui. Dignissimos dolore, neque nobis obcaecati quae similique vel vitae.</p>
+        <div class="buttons">
+            <a href="https://twitter.com/EsportLoud" class="button">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </a>
+            <a href="https://discord.gg/7R47QUaC4S" class="button">
+                <i class="fab fa-discord"></i>
+                Discord
+            </a>
         </div>
-    </div>
+    </section>
+    <section class="container">
+        <h2 class="title">Vous êtes une marque</h2>
+        <p class="text_body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur culpa cumque dolor eligendi excepturi expedita harum nostrum odio officiis optio, quaerat quasi quidem recusandae reprehenderit sed soluta, temporibus veniam vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium earum eum exercitationem expedita, explicabo fugiat illum iure minima nostrum officia optio quae qui rem saepe ut veritatis voluptas voluptatum!</p>
+        <div class="buttons">
+            <a href="{{ path('sponsor') }}" class="button button--red">
+                <i class="fas fa-file-alt"></i>
+                Page sponsors
+            </a>
+        </div>
+    </section>
 {% endblock %}

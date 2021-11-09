@@ -13,6 +13,7 @@
  */
 .container {
     padding: 3rem 8rem;
+    color: var(--main-red-color);
 }
 
 .title {
@@ -33,6 +34,11 @@
     font-family: Montserrat, sans-serif;
     font-size: 11pt;
     text-align: justify;
+}
+
+.container--red {
+    background-color: var(--main-red-color);
+    color: white;
 }
 
 /**
@@ -173,19 +179,8 @@
 }
 
 /**
-    HISTORY
- */
-.history {
-    background-color: var(--main-red-color);
-    color: white;
-}
-
-/**
     TIMELINE
  */
-.timeline {
-    color: var(--main-red-color);
-}
 
 .events {
     display: flex;
@@ -210,25 +205,11 @@
     font-size: 20pt;
 }
 
-/**
-    PHOTOS
- */
-.photos {
-    color: var(--main-red-color);
-}
+
 
 /**
     STAFF
  */
-.directing_team {
-    background-color: var(--main-red-color);
-    color: white;
-}
-
-.staff {
-    color: var(--main-red-color);
-}
-
 .section_name {
     font-family: Montserrat, sans-serif;
     margin-bottom: 2rem;
@@ -322,13 +303,6 @@
 }
 
 /**
-    ORGANIZATION
- */
-.organization {
-    color: var(--main-red-color);
-}
-
-/**
     TEAM
  */
 .team_logo {
@@ -336,22 +310,6 @@
     width: auto;
 }
 
-.team_presentation {
-    background-color: var(--main-red-color);
-    color: white;
-}
-
-.team_members {
-    color: var(--main-red-color);
-}
-
-/**
-    SPONSORS
- */
-.sponsor_presentation {
-    background-color: var(--main-red-color);
-    color: white;
-}
 
 .buttons {
     margin-top: 2rem;
@@ -377,25 +335,19 @@
     color: var(--main-red-color);
 }
 
-.our_sponsors {
+.button--red {
     color: var(--main-red-color);
+    border-color: var(--main-red-color);
+}
+
+.button--red:hover {
+    background-color: var(--main-red-color);
+    color: white;
 }
 
 .sponsor-link {
     color: var(--main-red-color);
     text-decoration: none;
-}
-
-/**
-    SHOP
- */
-.shop_presentation {
-    background-color: var(--main-red-color);
-    color: white;
-}
-
-.our_products {
-    color: var(--main-red-color);
 }
 
 /**
