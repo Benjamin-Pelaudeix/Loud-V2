@@ -52,7 +52,7 @@ class NewsCrudController extends AbstractCrudController
                 ->setRequired(true),
             SlugField::new('slug', 'Slug')
                 ->setTargetFieldName('title'),
-            TextEditorField::new('body', 'Contenu')
+            TextareaField::new('body', 'Contenu')
                 ->setRequired(true),
             ImageField::new('photo', 'Photo')
                 ->setBasePath('uploads/article-photo')

@@ -30,6 +30,7 @@
     --black-color: #000000;
     --black-transparent-color: rgba(0,0,0,.8);
     --white-transparent-color: rgba(255, 255, 255, .3);
+    --red-transparent-color: rgba(248, 23, 44, .7);
 }
 
 * {

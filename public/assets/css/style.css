@@ -28,6 +28,12 @@
     font-size: 36pt;
     text-transform: uppercase;
     color: var(--main-red-color);
+    text-align: center;
+}
+
+.title--news {
+    font-size: 24pt;
+    text-align: center;
 }
 
 .text_body {
@@ -36,9 +42,43 @@
     text-align: justify;
 }
 
+.text_body strong {
+    font-family: Montserrat-Bold, sans-serif;
+}
+
+.text_body a {
+    text-decoration: none;
+    color: var(--main-red-color);
+}
+
+.text_body a:hover {
+    text-decoration: underline;
+}
+
 .container--red {
     background-color: var(--main-red-color);
     color: white;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.badge {
+    background-color: var(--main-red-color);
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 8pt;
+    margin-right: 1rem;
+    padding: .2rem .5rem;
+    border-radius: 7px;
+}
+
+.badge:last-child {
+    margin-right: 0;
 }
 
 /**
@@ -246,16 +286,28 @@
     justify-content: space-around;
     padding: 3rem 1.5rem 3rem 0;
     border-top: 3px solid var(--main-red-color);
+    width: fit-content;
+}
+
+.card--news {
+    flex-direction: column;
+    padding: 0;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 9px;
     transition: .3s all ease-in-out;
 }
 
 .card_img {
     height: 10rem;
     width: auto;
+}
+
+.card_img--news {
+    width: 100%;
+    height: auto;
 }
 
 .card_name {
@@ -287,7 +339,6 @@
 .card_link {
     text-decoration: none;
     color: var(--main-red-color);
-    width: 100%;
 }
 
 .card_price {
@@ -300,6 +351,53 @@
     text-decoration: none;
     padding: 0 .3rem;
     font-size: 14pt;
+}
+
+.card_infos--news {
+    padding: 1rem 1rem;
+}
+
+.card_name--news {
+    font-size: 16pt;
+}
+
+/**
+    NEWS
+ */
+.img_banner {
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.news_banner {
+    height: 20rem;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+}
+
+.news_img {
+    width: 100vw;
+    height: auto;
+}
+
+.banner_infos {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background-color: var(--red-transparent-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner_msg {
+    font-family: Montserrat, sans-serif;
 }
 
 /**

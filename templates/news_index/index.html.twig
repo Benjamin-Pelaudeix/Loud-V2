@@ -5,26 +5,29 @@
 {% block title %}Nos actualités{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>Noos actualités</h1>
-        <div class="news-grid">
-            {% for new in news %}
-                <div class="news">
-                    <a href="{{ path('news_detail', { slug: new.slug }) }}">
-                        <div class="news">
-                            <img src="/uploads/article-photo/{{ new.photo }}" alt="{{ new.title }} Photo">
-                            <div class="news-infos">
-                                <h2>{{ new.title }}</h2>
-                                <div class="badges">
-                                    {% for category in new.category %}
-                                        <p class="badge">{{ category.name }}</p>
-                                    {% endfor %}
-                                </div>
+   <section class="page_title">
+       <h2 class="title--page">Nos actualités</h2>
+   </section>
+    <section class="container cards">
+        {% for article in news %}
+            <a href="{{ path('news_detail', { slug: article.slug }) }}" class="card card_link card--news">
+                <figure>
+                    <div class="img_banner">
+                        <img src="{{ asset('uploads/article-photo/' ~ article.photo) }}" alt="{{ article.title }}" class="card_img card_img--news">
+                    </div>
+                    <figcaption class="card_infos card_infos--news">
+                        <h3 class="card_name card_name--news">{{ article.title }}</h3>
+                        <p class="card_role">{{ article.createdAt | date('d/m/Y') }}</p>
+                        {% if article.category %}
+                            <div class="badges">
+                                {% for cat in article.category %}
+                                    <p class="badge">{{ cat.name }}</p>
+                                {% endfor %}
                             </div>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+                        {% endif %}
+                    </figcaption>
+                </figure>
+            </a>
+        {% endfor %}
+    </section>
 {% endblock %}

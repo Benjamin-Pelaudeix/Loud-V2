@@ -3,15 +3,39 @@
 {% block title %}{{ news.title }}{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <a href="{{ path('news_index') }}" class="link-button return"><i class="fas fa-chevron-left"></i> Retour</a>
-        <div class="news-content margin-return">
-            <h1>{{ news.title }}</h1>
-            <p>Écrit par {{ news.author.login }}, le {{ news.createdAt | date('d/m/Y') }} à {{ news.createdAt | date('H:m') }}</p>
-            <div class="news-photo news-content-photo">
-                <img src="/uploads/article-photo/{{ news.photo }}" alt="{{ news.title }} photo">
-            </div>
-            <article>{{ news.body | raw }}</article>
+    <figure class="news_banner">
+        <img class="news_img" src="{{ asset('uploads/article-photo/' ~ news.photo) }}" alt="{{ news.title }}">
+        <figcaption class="banner_infos">
+            <h2 class="title title--news">{{ news.title }}</h2>
+            <p class="banner_msg">Écrit par {{ news.author | upper }}, le {{ news.createdAt | date('d/m/Y') }}</p>
+        </figcaption>
+    </figure>
+    <article class="news_content container text_body">
+        {{ news.body | raw }}
+    </article>
+    <aside class="other_news container">
+        <h2 class="title">Autres actualités</h2>
+        <div class="cards">
+            {% for article in other_news %}
+                <a href="{{ path('news_detail', { slug: article.slug }) }}" class="card card_link card--news">
+                    <figure>
+                        <div class="img_banner">
+                            <img src="{{ asset('uploads/article-photo/' ~ article.photo) }}" alt="{{ article.title }}" class="card_img card_img--news">
+                        </div>
+                        <figcaption class="card_infos card_infos--news">
+                            <h3 class="card_name card_name--news">{{ article.title }}</h3>
+                            <p class="card_role">{{ article.createdAt | date('d/m/Y') }}</p>
+                            {% if article.category %}
+                                <div class="badges">
+                                    {% for cat in article.category %}
+                                        <p class="badge">{{ cat.name }}</p>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </figcaption>
+                    </figure>
+                </a>
+            {% endfor %}
         </div>
-    </div>
+    </aside>
 {% endblock %}

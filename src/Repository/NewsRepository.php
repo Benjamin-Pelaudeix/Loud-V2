@@ -19,4 +19,14 @@ class NewsRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, News::class);
     }
+
+    public function findOtherNews($slug)
+    {
+        return $this->createQueryBuilder('n')
+            ->andWhere('n.slug <> :slug')
+            ->setParameter('slug', $slug)
+            ->setMaxResults(2)
+            ->getQuery()
+            ->getResult();
+    }
 }

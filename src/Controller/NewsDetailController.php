@@ -31,8 +31,11 @@ class NewsDetailController extends AbstractController
 
         $news = $this->entityManager->getRepository(News::class)->findOneBySlug($slug);
 
+        $others = $this->entityManager->getRepository(News::class)->findOtherNews($slug);
+
         return $this->render('news_detail/index.html.twig', [
-            'news' => $news
+            'news' => $news,
+            'other_news' => $others
         ]);
     }
 }
